@@ -1,0 +1,70 @@
+import React from "react";
+import { IoLogoApple, IoLogoDropbox, IoLogoGithub } from "react-icons/io5";
+import { SiAirbnb, SiFramer, SiNike, SiStripe, SiWebflow } from "react-icons/si";
+
+type LeadProps = {
+  name: string;
+  industry: string;
+  href: string;
+  logo: React.JSX.Element;
+  live: boolean;
+}[];
+
+export const lead: LeadProps = [
+  {
+    name: "Apple",
+    industry: "Technology",
+    href: "https://apple.com",
+    logo: <IoLogoApple className="h-8 w-8" />,
+    live: true,
+  },
+  {
+    name: "Airbnb",
+    industry: "Hospitality",
+    href: "https://airbnb.com",
+    logo: <SiAirbnb className="h-8 w-8" color="#FF5A5F" />,
+    live: false,
+  },
+  {
+    name: "GitHub",
+    industry: "Version Control",
+    href: "https://github.com",
+    logo: <IoLogoGithub className="h-8 w-8" />,
+    live: false,
+  },
+  {
+    name: "Framer",
+    industry: "Design Tools",
+    href: "https://framer.com",
+    logo: <SiFramer className="h-8 w-8" color="#0055FF" />,
+    live: false,
+  },
+  {
+    name: "Webflow",
+    industry: "Web Development",
+    href: "https://webflow.com",
+    logo: <SiWebflow className="h-8 w-8" color="#FF5A5F" />,
+    live: false,
+  },
+  {
+    name: "Stripe",
+    industry: "Fintech",
+    href: "https://stripe.com",
+    logo: <SiStripe className="h-8 w-8" color="#626CD9" />,
+    live: false,
+  },
+  {
+    name: "Dropbox",
+    industry: "Cloud Storage",
+    href: "https://dropbox.com",
+    logo: <IoLogoDropbox className="h-8 w-8" color="#0061FE" />,
+    live: false,
+  },
+  {
+    name: "Nike",
+    industry: "Fashion",
+    href: "https://nike.com",
+    logo: <SiNike className="h-8 w-8" />,
+    live: false,
+  },
+];
