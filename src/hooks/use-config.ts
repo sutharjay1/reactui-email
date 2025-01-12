@@ -19,7 +19,7 @@ const useConfigStore = create<ConfigStore>()(
       setConfig: (config) => set({ config }),
     }),
     {
-      name: "config", // Key for localStorage
+      name: "config",
     },
   ),
 );

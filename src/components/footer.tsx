@@ -38,7 +38,7 @@ export default function Footer() {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} ReactUI Email Templates. All rights reserved.
           </p>
-          <div className="flex items-center space-x-4">
+          <div className="mb-2 flex items-center space-x-4 md:mb-0">
             {socialLinks.map((link) => (
               <Link
                 href={link.url}
@@ -56,14 +56,6 @@ export default function Footer() {
                 </label>
               </Link>
             ))}
-          </div>
-          <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-            <Link href="/privacy" className="hover:text-foreground">
-              Privacy
-            </Link>
-            <Link href="/terms" className="hover:text-foreground">
-              Terms
-            </Link>
           </div>
         </div>
       </div>

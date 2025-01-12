@@ -1,9 +1,10 @@
 import React from "react";
 import { IoLogoApple, IoLogoDropbox, IoLogoGithub } from "react-icons/io5";
 import { SiAirbnb, SiFramer, SiNike, SiStripe, SiWebflow } from "react-icons/si";
+import { Brand } from "../types";
 
 type LeadProps = {
-  name: string;
+  name: Brand;
   industry: string;
   href: string;
   logo: React.JSX.Element;
