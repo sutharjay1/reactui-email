@@ -46,9 +46,10 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.name}
+                aria-hidden="true"
               >
                 <label
-                  className="relative inline-flex size-9 cursor-pointer items-center justify-center rounded-full bg-none transition-colors hover:bg-accent peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-ring/70"
+                  className="relative inline-flex size-9 cursor-pointer items-center justify-center rounded-full bg-background transition-colors hover:bg-accent peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-ring/70"
                   htmlFor={link.name}
                   aria-hidden="true"
                 >
