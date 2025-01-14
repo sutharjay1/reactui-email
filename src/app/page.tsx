@@ -1,5 +1,4 @@
 import Footer from "@/components/footer";
-import Illustration from "@/components/illustration";
 import { lead } from "@/features/lib/constant";
 import { ArrowLongRightSolid, PlaySolid } from "@mynaui/icons-react";
 import Link from "next/link";
@@ -7,7 +6,6 @@ import Link from "next/link";
 export default function Page() {
   return (
     <>
-      <Illustration />
       <main className="flex min-h-full flex-1 flex-col">
         <div className="px-4 sm:px-6">
           <div className="mx-auto w-full max-w-3xl">
@@ -40,7 +38,7 @@ export default function Page() {
                       <li key={lead.name} className="relative">
                         <Link
                           href={lead.name.replaceAll(" ", "-").trim().toLowerCase()}
-                          className="inline-flex h-fit w-full flex-col items-start justify-between space-y-2 rounded-lg border border-border bg-background p-4 font-medium shadow-sm shadow-black/5 outline-offset-2 transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring/70 disabled:pointer-events-none disabled:opacity-50"
+                          className="inline-flex h-fit w-full flex-col items-start justify-between space-y-2 rounded-lg border border-border bg-background p-4 font-medium shadow-sm shadow-black/5 outline-offset-2 ring-inset ring-primary/10 transition-all duration-200 hover:bg-accent hover:text-accent-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring/70 disabled:pointer-events-none disabled:opacity-50"
                         >
                           <div className="flex items-center space-x-4">{lead.logo}</div>
                           <div className="flex w-full flex-1 items-center justify-between">

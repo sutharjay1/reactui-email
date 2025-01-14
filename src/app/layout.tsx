@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import Illustration from "@/components/illustration";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/features/lib/utils";
 import { Toaster as Sonner } from "@/features/ui/sonner";
@@ -52,6 +53,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Illustration />
           <div className="relative flex flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
             <Header />
             {children}
