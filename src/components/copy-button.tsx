@@ -65,7 +65,9 @@ const CopyButton = ({
               </div>
             </Button>
           </TooltipTrigger>
-          <TooltipContent className="px-2 py-1 text-xs text-muted-foreground">Copy</TooltipContent>
+          <TooltipContent className="px-2 py-1 text-xs text-primary dark:text-muted-foreground">
+            Copy
+          </TooltipContent>
         </Tooltip>
       </TooltipProvider>
     </div>
