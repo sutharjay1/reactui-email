@@ -1,10 +1,10 @@
 import PageHeader from "@/components/page-header";
-import { readBrandSource } from "@/components/read-brand-source";
+import { readBrandSources } from "@/components/read-brand-source";
 import { TemplateLayout } from "@/components/template-layout";
-import AppleWelcomeTemplate from "@/email/apple/welcome";
 import { render } from "@/features/lib/email-to-html";
 import { t } from "@/features/lib/utils";
 import { Metadata } from "next";
+import path from "path";
 
 export const metadata: Metadata = {
   title: "Apple | ReactUI Email",
@@ -49,17 +49,38 @@ export const metadata: Metadata = {
   },
 };
 
-const fetchEmailData = async (brand: string, path: string) => {
-  const source = await readBrandSource(brand, path);
-  return { emailSource: source };
+const fetchEmailData = async (brand: string) => {
+  const source = await readBrandSources(brand);
+  return source;
 };
 
 const Page = async () => {
   const brand = "apple";
 
-  const appleWelcomeHtml = await render(<AppleWelcomeTemplate />);
+  const emailSource = await fetchEmailData(brand);
 
-  const { emailSource: appleWelcomeSource } = await fetchEmailData(brand, "welcome");
+  const emailPreviews = await Promise.all(
+    emailSource.map(async (source) => {
+      const emailModule = await import(
+        `@/email/${brand}/${path.basename(source.filePath, ".tsx")}`
+      );
+      const EmailComponent = emailModule.default;
+
+      const emailHtml = await render(<EmailComponent />);
+
+      const fileName = path
+        .basename(source.filePath, ".tsx")
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+
+      return {
+        fileName,
+        content: source.content,
+        emailHtml,
+      };
+    }),
+  );
 
   return (
     <main>
@@ -74,11 +95,14 @@ const Page = async () => {
             integration.
           </PageHeader>
 
-          <TemplateLayout
-            label="Welcome"
-            emailHtml={appleWelcomeHtml}
-            emailSource={appleWelcomeSource!}
-          />
+          {emailPreviews.map((preview) => (
+            <TemplateLayout
+              key={preview.fileName}
+              label={preview.fileName}
+              emailHtml={preview.emailHtml}
+              emailSource={preview.content as string}
+            />
+          ))}
         </div>
       </div>
     </main>

@@ -1,14 +1,42 @@
 import { promises as fs } from "fs";
 import path from "path";
 
-export async function readBrandSource(brand: string, fileName: string) {
-  const filePath = path.join(process.cwd(), "src", "email", `${brand}`, `${fileName}.tsx`);
+export async function readBrandSources(brand: string) {
+  const dirPath = path.join(process.cwd(), "src", "email", brand);
+
+  async function getTSXFiles(dir: string): Promise<string[]> {
+    const entries = await fs.readdir(dir, { withFileTypes: true });
+    const tsxFiles: string[] = [];
+
+    for (const entry of entries) {
+      const entryPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        const nestedFiles = await getTSXFiles(entryPath);
+        tsxFiles.push(...nestedFiles);
+      } else if (entry.isFile() && entry.name.endsWith(".tsx")) {
+        tsxFiles.push(entryPath);
+      }
+    }
+
+    return tsxFiles;
+  }
 
   try {
-    const source = await fs.readFile(filePath, "utf8");
-    return source;
+    const tsxFilePaths = await getTSXFiles(dirPath);
+    const fileContents = await Promise.all(
+      tsxFilePaths.map(async (filePath) => {
+        try {
+          const content = await fs.readFile(filePath, "utf8");
+          return { filePath, content };
+        } catch (error) {
+          console.error(`Error reading file ${filePath}:`, error);
+          return { filePath, content: null };
+        }
+      }),
+    );
+    return fileContents;
   } catch (error) {
-    console.error(`Error reading file ${filePath}:`, error);
-    return null;
+    console.error(`Error reading files in directory ${dirPath}:`, error);
+    return [];
   }
 }
