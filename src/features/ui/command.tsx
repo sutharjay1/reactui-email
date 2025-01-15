@@ -26,8 +26,8 @@ Command.displayName = CommandPrimitive.displayName;
 const CommandDialog = ({ children, ...props }: DialogProps) => {
   return (
     <Dialog {...props}>
-      <DialogTitle></DialogTitle> {/* Temporary fix to silence console warning */}
-      <DialogDescription></DialogDescription> {/* Temporary fix to silence console warning */}
+      <DialogTitle></DialogTitle>
+      <DialogDescription></DialogDescription>
       <DialogContent className="overflow-hidden p-0 sm:max-w-lg [&>button:last-child]:hidden">
         <Command className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]]:px-2 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-3 [&_[cmdk-item]]:py-2">
           {children}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { IoLogoApple, IoLogoDropbox, IoLogoGithub } from "react-icons/io5";
 import { SiAirbnb, SiFramer, SiNike, SiStripe, SiWebflow } from "react-icons/si";
@@ -17,6 +18,20 @@ export const lead: LeadProps = [
     industry: "Technology",
     href: "https://apple.com",
     logo: <IoLogoApple className="h-8 w-8" />,
+    live: true,
+  },
+  {
+    name: "Peerlist",
+    industry: "Social Networking",
+    href: "https://peerlist.io",
+    logo: (
+      <Image
+        width={28}
+        height={28}
+        src="https://res.cloudinary.com/sutharjay/image/upload/v1733359803/me/peerlist.svg"
+        alt="Peerlist"
+      />
+    ),
     live: true,
   },
   {

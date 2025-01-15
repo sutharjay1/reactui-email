@@ -35,13 +35,15 @@ export default function Page() {
                   {lead
                     .filter((lead) => lead.live)
                     .map((lead) => (
-                      <li key={lead.name} className="relative">
+                      <li key={lead.name} className="relative flex h-full">
                         <Link
                           href={lead.name.replaceAll(" ", "-").trim().toLowerCase()}
-                          className="inline-flex h-fit w-full flex-col items-start justify-between space-y-2 rounded-lg border border-border bg-background p-4 font-medium shadow-sm shadow-black/5 outline-offset-2 ring-inset ring-primary/10 transition-all duration-200 hover:bg-accent hover:text-accent-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring/70 disabled:pointer-events-none disabled:opacity-50"
+                          className="inline-flex h-full w-full flex-col items-start justify-between space-y-2 rounded-lg border border-border bg-background p-4 font-medium shadow-sm shadow-black/5 outline-offset-2 ring-inset ring-primary/10 transition-all duration-200 hover:bg-accent hover:text-accent-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring/70 disabled:pointer-events-none disabled:opacity-50"
                         >
-                          <div className="flex items-center space-x-4">{lead.logo}</div>
-                          <div className="flex w-full flex-1 items-center justify-between">
+                          <div className="flex items-center justify-center space-x-4">
+                            {lead.logo}
+                          </div>
+                          <div className="flex w-full flex-1 items-end justify-between">
                             <span className="truncate">{lead.name}</span>
                             <ArrowLongRightSolid
                               size={20}

@@ -6,4 +6,5 @@ export type Brand =
   | "Webflow"
   | "Stripe"
   | "Dropbox"
-  | "Nike";
+  | "Nike"
+  | "Peerlist";
