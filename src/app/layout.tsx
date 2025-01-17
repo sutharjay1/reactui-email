@@ -53,9 +53,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Illustration />
           <div className="relative flex flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
             <Header />
+            <Illustration />
             {children}
           </div>
         </ThemeProvider>
