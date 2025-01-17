@@ -6,6 +6,8 @@ import { t } from "@/features/lib/utils";
 import { Metadata } from "next";
 import path from "path";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Peerlist | ReactUI Email",
   description:
@@ -49,15 +51,10 @@ export const metadata: Metadata = {
   },
 };
 
-const fetchEmailData = async (brand: string) => {
-  const source = await readBrandSources(brand);
-  return source;
-};
-
 const Page = async () => {
   const brand = "peerlist";
 
-  const emailSource = await fetchEmailData(brand);
+  const emailSource = await readBrandSources(brand);
 
   const emailPreviews = await Promise.all(
     emailSource.map(async (source) => {
