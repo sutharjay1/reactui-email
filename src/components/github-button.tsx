@@ -6,7 +6,7 @@ export default async function GithubButton() {
     <Button className="h-8 rounded-full" asChild>
       <Link href="https://github.com/sutharjay1/reactui-email" target="_blank">
         <svg
-          className="-ms-0.5 me-2 fill-current text-zinc-500"
+          className="-ms-0.5 me-2 fill-current"
           xmlns="http://www.w3.org/2000/svg"
           width="17"
           height="16"
