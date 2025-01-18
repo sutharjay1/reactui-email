@@ -28,7 +28,7 @@ export const lead: LeadProps = [
       <Image
         width={28}
         height={28}
-        src="https://res.cloudinary.com/sutharjay/image/upload/v1733359803/me/peerlist.svg"
+        src="https://res.cloudinary.com/sutharjay/image/upload/v1737222539/me/peerlist.svg"
         alt="Peerlist"
       />
     ),
