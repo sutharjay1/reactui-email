@@ -1,7 +1,8 @@
+import { BrandFramerSolid } from "@mynaui/icons-react";
 import Image from "next/image";
 import React from "react";
 import { IoLogoApple, IoLogoDropbox, IoLogoGithub } from "react-icons/io5";
-import { SiAirbnb, SiFramer, SiNike, SiStripe, SiWebflow } from "react-icons/si";
+import { SiAirbnb, SiNike, SiStripe, SiWebflow } from "react-icons/si";
 import { Brand } from "../types";
 
 type LeadProps = {
@@ -52,15 +53,15 @@ export const lead: LeadProps = [
     name: "Framer",
     industry: "Design Tools",
     href: "https://framer.com",
-    logo: <SiFramer className="h-8 w-8" color="#0055FF" />,
-    live: false,
+    logo: <BrandFramerSolid className="h-8 w-8" />,
+    live: true,
   },
   {
     name: "Webflow",
     industry: "Web Development",
     href: "https://webflow.com",
-    logo: <SiWebflow className="h-8 w-8" color="#FF5A5F" />,
-    live: false,
+    logo: <SiWebflow className="h-8 w-8" color="#146ef5" />,
+    live: true,
   },
   {
     name: "Stripe",
