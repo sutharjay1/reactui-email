@@ -81,12 +81,26 @@ export default function WelcomeEmail() {
           <Container className="mx-auto px-4 py-5">
             <Section className="mt-8">
               <Link href="https://peerlist.io">
-                <Img
-                  src="http://cdn.mcauto-images-production.sendgrid.net/d60e16665ddff5a7/3f676a00-5763-44d7-a004-4323eabb2ff9/2180x560.png"
-                  width="124"
-                  height="32"
-                  alt="Peerlist Logo"
-                />
+                <svg
+                  role="img"
+                  style={{
+                    transform: "scale(1.4)",
+                  }}
+                  width="16"
+                  height="18"
+                  viewBox="0 0 16 18"
+                  fill="#ff6719"
+                  stroke-width="1.8"
+                  stroke="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <title></title>
+                    <path d="M16 4H0V6H16V4Z"></path>
+                    <path d="M0 8V18L7.9993 13.534L16 18V8H0Z"></path>
+                    <path d="M16 0H0V2H16V0Z"></path>
+                  </g>
+                </svg>
               </Link>
             </Section>
 

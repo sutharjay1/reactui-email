@@ -29,8 +29,31 @@ export const lead: LeadProps = [
       <Image
         width={28}
         height={28}
+        priority
         src="https://res.cloudinary.com/sutharjay/image/upload/v1737222539/me/peerlist.svg"
         alt="Peerlist"
+      />
+    ),
+    live: true,
+  },
+  {
+    name: "Framer",
+    industry: "Design Tools",
+    href: "https://framer.com",
+    logo: <BrandFramerSolid className="h-8 w-8" />,
+    live: true,
+  },
+  {
+    name: "SubStack",
+    industry: "Blog Platform",
+    href: "https://substack.com",
+    logo: (
+      <Image
+        width={28}
+        height={28}
+        priority
+        src="https://res.cloudinary.com/sutharjay/image/upload/v1737300995/me/substack-icon.svg"
+        alt="Substack"
       />
     ),
     live: true,
@@ -49,13 +72,7 @@ export const lead: LeadProps = [
     logo: <IoLogoGithub className="h-8 w-8" />,
     live: false,
   },
-  {
-    name: "Framer",
-    industry: "Design Tools",
-    href: "https://framer.com",
-    logo: <BrandFramerSolid className="h-8 w-8" />,
-    live: true,
-  },
+
   {
     name: "Webflow",
     industry: "Web Development",

@@ -33,10 +33,10 @@ export function CodeBlockWrapper({
         <div
           className={cn(
             "absolute flex items-end justify-center bg-gradient-to-b from-zinc-700/0 via-zinc-900/50 to-zinc-950 p-2",
-            isOpened ? "inset-x-0 bottom-0 h-20" : "inset-0",
+            isOpened ? "inset-x-0 bottom-0 h-16" : "inset-0",
           )}
         >
-          <CollapsibleTrigger asChild>
+          <CollapsibleTrigger asChild className="mb-4">
             <Button variant="secondary" className="h-8 text-xs">
               {isOpened ? "Collapse" : expandButtonTitle}
             </Button>
