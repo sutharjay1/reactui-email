@@ -2,12 +2,14 @@ import { Card, CardContent } from "@/features/ui/card";
 import {
   Body,
   Button,
+  Column,
   Container,
   Head,
   Html,
   Img,
   Link,
   Preview,
+  Row,
   Section,
   Tailwind,
   Text,
@@ -179,7 +181,7 @@ export default function SubstackUnreadPost() {
               </Button>
             </Section>
 
-            <Section className="mt-8 text-center font-light text-primary/50">
+            <Section className="mb-4 mt-8 text-center font-light text-primary/50">
               <Text className="m-0 p-0 text-xs">@ 2025 Substack Inc.</Text>
               <Text className="m-0 p-0 text-xs">
                 548 Market street PMB 72296, san Francisco, CA 94104
@@ -192,8 +194,18 @@ export default function SubstackUnreadPost() {
               </Link>
 
               <Section className="mx-auto mt-8 flex items-center justify-center">
-                <Button className="text-brand flex w-fit cursor-pointer items-center gap-2 rounded-lg border p-3 text-center text-[14px] font-medium no-underline">
-                  Start writing
+                <Button className="text-brand mx-2 flex w-fit cursor-pointer items-center gap-2 rounded-lg border p-1 text-center text-[14px] font-medium no-underline">
+                  <Row>
+                    <Column>
+                      <Img
+                        src="https://res.cloudinary.com/sutharjay/image/upload/v1737300582/me/fyajxy7ya39uymibutjv.svg"
+                        width="32"
+                        height="32"
+                        alt="Substack Logo"
+                      />
+                    </Column>
+                    <Column>Start writing</Column>
+                  </Row>
                 </Button>
               </Section>
             </Section>
