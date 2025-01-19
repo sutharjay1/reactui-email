@@ -6,15 +6,15 @@ import { CodeBlock } from "./code-block";
 import { CodeBlockWrapper } from "./code-block-wrapper";
 import CopyButton from "./copy-button";
 
-type Props = {
+type Props = React.HTMLAttributes<HTMLDivElement> & {
   label: string;
   emailSource: string;
   emailHtml: string;
 };
 
-export const TemplateLayout = ({ label, emailHtml, emailSource }: Props) => {
+export const TemplateLayout = ({ label, emailHtml, emailSource, ...props }: Props) => {
   return (
-    <div>
+    <div {...props} className="scroll-mt-24">
       <h1 className="mb-6 text-2xl font-extrabold leading-tight tracking-tight text-foreground md:text-3xl">
         {label}
       </h1>
