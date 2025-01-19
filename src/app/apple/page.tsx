@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: "https://reactui.email/apple",
     images: [
       {
-        url: "https://reactui.email",
+        url: "https://reactui.email/opengraph-image.jpg",
         alt: "Apple Welcome Email Template Preview",
         width: 1200,
         height: 630,
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Apple | ReactUI Email",
     description:
       "Check out the Apple Welcome Email template with preview and code, built with Next.js and TailwindCSS for ReactUI Email.",
-    images: ["https://reactui.email"],
+    images: ["https://reactui.email/opengraph-image.jpg"],
   },
   alternates: {
     canonical: "https://reactui.email/apple",
