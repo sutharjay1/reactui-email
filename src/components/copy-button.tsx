@@ -1,9 +1,9 @@
 "use client";
 
+import { useCopy } from "@/features/hooks/use-copy";
 import { cn } from "@/features/lib/utils";
 import { Button } from "@/features/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/features/ui/tooltip";
-import { useCopy } from "@/hooks/use-copy";
 
 const CopyButton = ({
   componentSource,
