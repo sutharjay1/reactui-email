@@ -57,10 +57,9 @@ export default function Page() {
                 </ul>
               </nav>
             </div>
-
-            <Footer />
           </div>
         </div>
+        <Footer />
       </main>
     </>
   );

@@ -30,9 +30,9 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="mx-auto w-full pb-4 pt-12 md:pb-0 md:pt-16">
-        <Separator className="my-8 h-[1px] rounded-full bg-ring/20" />
+    <footer className="mx-auto w-full">
+      <div className="mx-auto max-w-3xl pb-4">
+        <Separator className="my-4 h-[1px] rounded-full bg-ring/20" />
 
         <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row">
           <p className="text-sm text-muted-foreground">
