@@ -57,8 +57,6 @@ export const metadata: Metadata = {
 const Page = async () => {
   const brand = "substack";
 
-  console.log(brand);
-
   const emailSource = await readBrandSources(brand);
 
   const emailPreviews = await Promise.all(
