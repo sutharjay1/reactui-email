@@ -1,5 +1,6 @@
 import PageHeader from "@/components/page-header";
 import { readBrandSources } from "@/components/read-brand-source";
+import TagScroll from "@/components/tag-scroll";
 import { TemplateLayout } from "@/components/template-layout";
 import { render } from "@/features/lib/email-to-html";
 import { t } from "@/features/lib/utils";
@@ -80,7 +81,8 @@ const Page = async () => {
   );
 
   return (
-    <main>
+    <main className="relative">
+      <TagScroll emailPreviews={emailPreviews} />
       <div className="px-4 sm:px-6">
         <div className="mx-auto w-full max-w-3xl">
           <PageHeader title={brand}>
@@ -94,6 +96,7 @@ const Page = async () => {
 
           {emailPreviews.map((preview) => (
             <TemplateLayout
+              id={preview.fileName}
               key={preview.fileName}
               label={preview.fileName}
               emailHtml={preview.emailHtml}
