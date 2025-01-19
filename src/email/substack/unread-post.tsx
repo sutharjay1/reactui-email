@@ -124,7 +124,7 @@ export default function SubstackUnreadPost() {
 
                   <Button
                     className="w-full rounded-lg bg-[#eeeeee] px-6 py-3 text-center text-[14px] font-medium text-zinc-950 no-underline dark:text-zinc-50"
-                    href="https://www.framer.com/downloads/"
+                    href="https://substack.com"
                   >
                     Read more
                   </Button>
@@ -162,7 +162,7 @@ export default function SubstackUnreadPost() {
 
                   <Button
                     className="w-full rounded-lg bg-[#eeeeee] px-6 py-3 text-center text-[14px] font-medium text-zinc-950 no-underline dark:text-zinc-50"
-                    href="https://www.framer.com/downloads/"
+                    href="https://substack.com"
                   >
                     Read more
                   </Button>
@@ -192,7 +192,7 @@ export default function SubstackUnreadPost() {
               </Link>
 
               <Section className="mx-auto mt-8 flex items-center justify-center">
-                <Button className="text-brand flex w-fit items-center gap-2 rounded-lg border p-3 text-center text-[14px] font-medium no-underline">
+                <Button className="text-brand flex w-fit cursor-pointer items-center gap-2 rounded-lg border p-3 text-center text-[14px] font-medium no-underline">
                   Start writing
                 </Button>
               </Section>
