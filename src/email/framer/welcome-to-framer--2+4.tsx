@@ -14,15 +14,17 @@ import {
   Text,
 } from "@react-email/components";
 
-interface WelcomeToFramerOneProps {
+interface WelcomeToFramerTwoProps {
   username?: string;
 }
 
-export default function WelcomeToFramerOne({ username = "Jay" }: WelcomeToFramerOneProps) {
+export default function WelcomeToFramerTwo({ username = "Jay" }: WelcomeToFramerTwoProps) {
   return (
     <Html>
       <Head />
-      <Preview>Get started with our Fundamentals course and discover the power of Framer.</Preview>
+      <Preview>
+        Download Framer for Mac or Windows and enjoy a smoother, more seamless experience.
+      </Preview>
       <Tailwind
         config={{
           darkMode: "class",
@@ -84,7 +86,7 @@ export default function WelcomeToFramerOne({ username = "Jay" }: WelcomeToFramer
           <Container className="mx-auto px-4 py-5">
             <Section className="mt-4">
               <Img
-                src="https://d3b9kr64nievew.cloudfront.net/cm1rki22e0174akkvdbsg2yzi/cm1rkyfp8000l1sulf3ko6p6v.png"
+                src="https://d3b9kr64nievew.cloudfront.net/cm1rocldn025zsgcy9suq2qbj/cm1rogugg02roub1vlgmhb4sy.png"
                 width="50"
                 height="50"
                 alt="Framer"
@@ -94,43 +96,42 @@ export default function WelcomeToFramerOne({ username = "Jay" }: WelcomeToFramer
 
             <Section className="mt-4">
               <Heading className="mx-0 mb-8 mt-2 p-0 text-lg font-normal">
-                Hey {username}, welcome to Framer!
+                Hey {username}, are you building Framer sites from your browser?
               </Heading>
-              <Text className="text-[14px] leading-6 text-primary/75">
-                We&apos;re thrilled you chose us to build your website. To get started, we recommend
-                watching our Framer Academy{" "}
+              <Text className="text-[14px] leading-[24px] text-primary/75">
+                For a smoother, more seamless experience, grab the Framer app for{" "}
                 <Link
-                  href="https://www.framer.com/academy/courses/fundamentals"
+                  href="https://www.framer.com/downloads/"
                   className="text-primary/75 underline"
                 >
-                  Fundamentals course
+                  Mac or Windows
                 </Link>
-                . This will help you get up and running quickly, especially if you&apos;re
-                transitioning from Figma or Sketch.
+                . Enjoy faster performance and additional features that make designing sites even
+                easier.
               </Text>
             </Section>
 
             <Section className="mt-8">
               <Img
-                src="https://d3b9kr64nievew.cloudfront.net/cm1rki22e0174akkvdbsg2yzi/cm1rucu6q0142tbx2o3qu05nh.jpg"
-                alt="Framer Academy"
-                className="w-full cursor-pointer rounded-2xl"
+                src="https://d3b9kr64nievew.cloudfront.net/cm1rocldn025zsgcy9suq2qbj/cm1ruf7x7011lblkcdecne9h8.jpg"
+                alt="Framer Desktop Apps"
+                className="w-full rounded-2xl"
               />
             </Section>
 
             <Section className="mt-8">
-              <Heading className="mx-0 mb-2 p-0 text-[16px] font-normal">
-                Why watch the Fundamentals course?
+              <Heading className="mx-0 mb-4 p-0 text-[16px] font-normal text-primary/75">
+                Why download the Framer app?
               </Heading>
-              <ul className="list-disc pl-6">
+              <ul className="mt-4 list-disc pl-6">
                 <li className="text-[14px] leading-6 text-primary/75">
-                  Quick start: Get your first site live in minutes.
+                  Faster performance: Experience quicker load times and smoother interactions.
                 </li>
                 <li className="text-[14px] leading-6 text-primary/75">
-                  Easy transition: Perfect for designers moving from Figma or Sketch.
+                  Enhanced features: Access features available only on the desktop app.
                 </li>
                 <li className="text-[14px] leading-6 text-primary/75">
-                  Expert tips: Learn best practices from the pros.
+                  Improved workflow: Streamline your design process with advanced tools.
                 </li>
               </ul>
             </Section>
@@ -138,25 +139,25 @@ export default function WelcomeToFramerOne({ username = "Jay" }: WelcomeToFramer
             <Section className="mt-8">
               <Button
                 className="rounded-lg bg-[#0099ff] px-6 py-3 text-center text-[14px] font-medium text-white no-underline"
-                href="https://www.framer.com/academy/courses/fundamentals"
+                href="https://www.framer.com/downloads/"
               >
-                Watch Fundamentals Course
+                Download Framer app
               </Button>
             </Section>
 
             <Section className="mt-4">
               <Text className="text-[14px] leading-6 text-primary/75">
-                We hope these tutorials help you settle in during your first day with Framer.
-                Tomorrow, we&lsquo;ll showcase fantastic{" "}
+                Tomorrow, we&#39;ll show you how to easily turn your static Figma designs into
+                dynamic websites using the{" "}
                 <Link
-                  href="https://www.framer.com/marketplace/"
+                  href="https://www.framer.com/figma-to-html/"
                   className="text-primary/75 underline"
                 >
-                  Framer Templates
-                </Link>{" "}
-                to create sites with ease!
+                  free plugin
+                </Link>
+                .
               </Text>
-              <Text className="text-[14px] leading-6">✌️ Framer</Text>
+              <Text className="text-[14px] leading-6 text-primary/75">✌️ Framer</Text>
             </Section>
 
             <Hr className="mx-0 my-[26px] w-full border border-solid border-[#eaeaea]" />
