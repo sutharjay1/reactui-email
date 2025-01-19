@@ -71,16 +71,22 @@ const Page = async () => {
         path
           .basename(source.filePath, ".tsx")
           .split("--")
+          .reverse()
           .map((part, index) => {
+            if (index === 1) {
+              return part.replace("+", " of ");
+            }
+
             if (index === 0) {
               return part
                 .split("-")
                 .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
                 .join(" ");
             }
-            return part.replace("+", " of ");
+
+            return part;
           })
-          .join(" -  (") + ")";
+          .join(" - (") + ")";
 
       return {
         fileName,
