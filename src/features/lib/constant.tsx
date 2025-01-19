@@ -61,7 +61,7 @@ export const lead: LeadProps = [
     industry: "Web Development",
     href: "https://webflow.com",
     logo: <SiWebflow className="h-8 w-8" color="#146ef5" />,
-    live: true,
+    live: false,
   },
   {
     name: "Stripe",

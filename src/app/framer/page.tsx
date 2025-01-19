@@ -27,10 +27,10 @@ export const metadata: Metadata = {
     title: "Framer | ReactUI Email",
     description:
       "Explore the Framer Welcome Email template, featuring a clean, responsive design and code preview, built with ReactUI Email.",
-    url: "https://reactui.email/framer",
+    url: "https://reactui.email",
     images: [
       {
-        url: "https://reactui.email",
+        url: "https://reactui.email/opengraph-image.jpg",
         alt: "Framer Welcome Email Template Preview",
         width: 1200,
         height: 630,
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Framer | ReactUI Email",
     description:
       "Check out the Framer Welcome Email template with preview and code, built with Next.js and TailwindCSS for ReactUI Email.",
-    images: ["https://reactui.email"],
+    images: ["https://reactui.email/opengraph-image.jpg"],
   },
   alternates: {
     canonical: "https://reactui.email/framer",
