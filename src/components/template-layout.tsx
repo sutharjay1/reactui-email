@@ -20,10 +20,16 @@ export const TemplateLayout = ({ label, emailHtml, emailSource, ...props }: Prop
       </h1>
       <Tabs defaultValue="preview" className="w-full">
         <TabsList className="flex h-7 items-center justify-start gap-x-2 rounded-md bg-transparent px-[calc(theme(spacing.1)_-_2px)] py-[theme(spacing.1)]">
-          <TabsTrigger value="preview" className="h-[1.45rem] px-2 transition-all">
+          <TabsTrigger
+            value="preview"
+            className="h-[1.45rem] px-2 transition-all data-[state=active]:shadow-none"
+          >
             <p className="text-base font-medium tracking-tight">Preview</p>
           </TabsTrigger>
-          <TabsTrigger value="code" className="h-[1.45rem] rounded-md px-2 transition-all">
+          <TabsTrigger
+            value="code"
+            className="h-[1.45rem] rounded-md px-2 transition-all data-[state=active]:shadow-none"
+          >
             <p className="text-base font-medium tracking-tight">Code</p>
           </TabsTrigger>
         </TabsList>
@@ -31,7 +37,7 @@ export const TemplateLayout = ({ label, emailHtml, emailSource, ...props }: Prop
         <Separator className="mb-4 mt-2" />
 
         <TabsContent value="preview" className="space-y-4">
-          <Card className="border border-ring/10 bg-transparent p-0 shadow-none dark:border-ring/10">
+          <Card className="border border-ring/30 bg-transparent p-0 shadow-none dark:border-ring/10">
             <CardContent className="space-y-4 p-0 px-0 md:px-0">
               <div
                 dangerouslySetInnerHTML={{ __html: emailHtml }}

@@ -7,4 +7,5 @@ export type Brand =
   | "Stripe"
   | "Dropbox"
   | "Nike"
+  | "SubStack"
   | "Peerlist";

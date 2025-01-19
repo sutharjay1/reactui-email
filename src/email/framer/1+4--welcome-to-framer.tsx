@@ -32,7 +32,7 @@ export default function WelcomeToFramerOne({ username = "Jay" }: WelcomeToFramer
                 sans: ["var(--font-sans)"],
               },
               colors: {
-                brand: "#212121",
+                brand: "#0099ff",
                 muted: "#738A94",
                 background: "hsl(var(--background))",
                 foreground: "hsl(var(--foreground))",
@@ -137,7 +137,7 @@ export default function WelcomeToFramerOne({ username = "Jay" }: WelcomeToFramer
 
             <Section className="mt-8">
               <Button
-                className="rounded-lg bg-[#0099ff] px-6 py-3 text-center text-[14px] font-medium text-white no-underline"
+                className="bg-brand rounded-lg px-6 py-3 text-center text-[14px] font-medium text-white no-underline"
                 href="https://www.framer.com/academy/courses/fundamentals"
               >
                 Watch Fundamentals Course
