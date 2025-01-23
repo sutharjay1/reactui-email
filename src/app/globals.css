@@ -58,7 +58,6 @@
     @apply bg-background text-foreground;
   }
 
-  /* Custom scrollbar styling. Thanks @pranathiperii. */
   pre::-webkit-scrollbar {
     width: 5px;
   }
