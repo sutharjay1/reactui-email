@@ -6,7 +6,7 @@ import Link from "next/link";
 const socialLinks = [
   {
     name: "GitHub",
-    url: "https://github.com/sutharjay1",
+    url: "https://github.com/sutharjay1/reactui-email",
     icon: <BrandGithubSolid size={20} strokeWidth={2} />,
   },
   {
@@ -36,7 +36,7 @@ export default function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 px-4 text-center sm:flex-row sm:px-6">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} ReactUI Email Templates. All rights reserved.
+            © {new Date().getFullYear()} ReactUI Email. All rights reserved.
           </p>
           <div className="mb-2 flex items-center space-x-4 md:mb-0">
             {socialLinks.map((link) => (
