@@ -90,7 +90,7 @@ export default function PeerlistJobApplication() {
             </Section>
 
             <Section className="mt-8">
-              <Text className="text-xl font-extrabold leading-tight">
+              <Text className="text-xl font-bold leading-tight">
                 Peerlist received your application!
               </Text>
             </Section>
@@ -99,9 +99,9 @@ export default function PeerlistJobApplication() {
               <Text className="text-base">Hey Jay 👋,</Text>
               <Text className="text-base">
                 You have successfully applied for the{" "}
-                <span className="text-base font-extrabold">Full Stack Intern</span> role at{" "}
-                <span className="text-base font-extrabold">Peerlist</span>. Someone from the
-                recruitment team will get back to you shortly with an update to your application.
+                <span className="text-base font-bold">Full Stack Intern</span> role at{" "}
+                <span className="text-base font-bold">Peerlist</span>. Someone from the recruitment
+                team will get back to you shortly with an update to your application.
               </Text>
             </Section>
 
