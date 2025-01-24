@@ -1,4 +1,4 @@
-import Footer from "@/components/footer";
+import Footer from "@/features/global/footer";
 import { lead } from "@/features/lib/constant";
 import { ArrowLongRightSolid, PlaySolid } from "@mynaui/icons-react";
 import Link from "next/link";

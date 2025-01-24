@@ -1,8 +1,8 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/features/lib/utils";
-import { Button } from "@/features/ui/button";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/features/ui/collapsible";
 import * as React from "react";
 
 interface CodeBlockProps extends React.HTMLAttributes<HTMLDivElement> {

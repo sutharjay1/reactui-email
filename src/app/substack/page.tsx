@@ -1,6 +1,6 @@
-import PageHeader from "@/components/page-header";
-import { readBrandSources } from "@/components/read-brand-source";
-import { TemplateLayout } from "@/components/template-layout";
+import PageHeader from "@/features/global/page-header";
+import { readBrandSources } from "@/features/global/read-brand-source";
+import { TemplateLayout } from "@/features/global/template-layout";
 import { render } from "@/features/lib/email-to-html";
 import { t } from "@/features/lib/utils";
 import { Metadata } from "next";

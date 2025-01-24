@@ -1,9 +1,9 @@
-import Header from "@/components/header";
-import Illustration from "@/components/illustration";
-import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { Toaster } from "@/components/ui/toaster";
+import Header from "@/features/global/header";
+import Illustration from "@/features/global/illustration";
+import { ThemeProvider } from "@/features/global/theme-provider";
 import { cn } from "@/features/lib/utils";
-import { Toaster as Sonner } from "@/features/ui/sonner";
-import { Toaster } from "@/features/ui/toaster";
 import type { Metadata, Viewport } from "next";
 import { Inter as FontSans } from "next/font/google";
 import Script from "next/script";
