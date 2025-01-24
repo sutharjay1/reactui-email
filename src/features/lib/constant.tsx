@@ -102,3 +102,10 @@ export const lead: LeadProps = [
     live: false,
   },
 ];
+
+export const navLinks = [
+  {
+    label: "Components",
+    href: "/docs/components",
+  },
+];

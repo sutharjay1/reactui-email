@@ -1,6 +1,13 @@
 "use client";
 
 import { cn } from "@/features/lib/utils";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/features/ui/select";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/features/ui/tooltip";
 
 type Props = {
@@ -12,14 +19,21 @@ type Props = {
 };
 
 const TagScroll = ({ emailPreviews }: Props) => {
+  const handleValueChange = (value: string) => {
+    document.getElementById(value)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
-    <div
-      className={cn(
-        "fixed bottom-2 right-4 z-50 flex -translate-y-1/2 flex-col items-end justify-end gap-2 md:bottom-auto md:top-1/2",
-        "rounded-lg border bg-card p-2 text-card-foreground shadow-sm md:border-none",
-      )}
-    >
-      <TooltipProvider>
+    <TooltipProvider>
+      <div
+        className={cn(
+          "fixed z-50 hidden -translate-y-1/2 flex-col items-end justify-end gap-2 md:bottom-auto md:top-1/2 md:flex",
+          "rounded-lg border bg-card p-2 text-card-foreground shadow-sm md:border-none",
+        )}
+      >
         {emailPreviews.map((preview) => (
           <Tooltip key={preview.fileName} delayDuration={0}>
             <TooltipTrigger asChild>
@@ -43,8 +57,27 @@ const TagScroll = ({ emailPreviews }: Props) => {
             </TooltipContent>
           </Tooltip>
         ))}
-      </TooltipProvider>
-    </div>
+      </div>
+
+      <div
+        className={cn(
+          "sticky top-4 z-50 mx-3 my-2 mt-40 flex flex-col items-start justify-start gap-2 text-card-foreground md:hidden",
+        )}
+      >
+        <Select onValueChange={handleValueChange}>
+          <SelectTrigger className="w-full p-2 px-4">
+            <SelectValue placeholder="Jump to email" />
+          </SelectTrigger>
+          <SelectContent className="p-2">
+            {emailPreviews.map((preview) => (
+              <SelectItem key={preview.fileName} value={preview.fileName}>
+                {preview.fileName.replace(/ - .*/, "")}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
+    </TooltipProvider>
   );
 };
 
