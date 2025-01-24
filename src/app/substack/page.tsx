@@ -96,6 +96,7 @@ const Page = async () => {
 
           {emailPreviews.map((preview) => (
             <TemplateLayout
+              brand={t(brand)}
               id={preview.fileName}
               key={preview.fileName}
               label={preview.fileName}
