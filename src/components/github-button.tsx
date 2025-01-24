@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function GithubButton() {
   return (
-    <Button className="flex h-8 items-center justify-center rounded-full px-3 md:px-4" asChild>
+    <Button className="flex h-8 items-center justify-center rounded-full px-2 md:px-4" asChild>
       <Link
         href="https://github.com/sutharjay1/reactui-email"
         target="_blank"

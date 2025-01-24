@@ -55,13 +55,11 @@ export default function Header() {
             <GithubButton />
             <ThemeToggle />
             <Drawer open={open} onOpenChange={onOpenChange}>
-              <DrawerTitle>
-                <span className="sr-only">Navigation</span>
-              </DrawerTitle>
+              <DrawerTitle className="sr-only">Navigation</DrawerTitle>
               <DrawerTrigger asChild>
                 <Button
                   variant="ghost"
-                  className="-ml-2 mr-2 h-8 w-8 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+                  className="-ml-2 h-8 w-8 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
