@@ -96,7 +96,9 @@
     }
   }
 
+
   ::-webkit-scrollbar {
+  pre::-webkit-scrollbar {
     width: 5px;
   }
 
