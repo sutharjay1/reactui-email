@@ -1,8 +1,8 @@
 "use client";
 
-import CopyButton from "@/components/copy-button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import CopyButton from "@/features/global/copy-button";
 import { useConfig } from "@/features/hooks/use-config";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/features/ui/tabs";
 
 const CliCommands = () => {
   const { config, setConfig } = useConfig();

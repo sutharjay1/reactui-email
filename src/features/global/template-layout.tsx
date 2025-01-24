@@ -1,7 +1,7 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/features/lib/utils";
-import { Card, CardContent } from "@/features/ui/card";
-import { Separator } from "@/features/ui/separator";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/features/ui/tabs";
 import { CodeBlock } from "./code-block";
 import { CodeBlockWrapper } from "./code-block-wrapper";
 import CopyButton from "./copy-button";

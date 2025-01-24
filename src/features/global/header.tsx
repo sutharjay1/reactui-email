@@ -2,14 +2,14 @@
 
 import Link, { LinkProps } from "next/link";
 
-import GithubButton from "@/components/github-button";
-import ThemeToggle from "@/components/theme-toggle";
+import { Button } from "@/components/ui/button";
+import { Drawer, DrawerContent, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
 import { lead, navLinks } from "@/features/lib/constant";
 import { cn } from "@/features/lib/utils";
-import { Button } from "@/features/ui/button";
-import { Drawer, DrawerContent, DrawerTitle, DrawerTrigger } from "@/features/ui/drawer";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
+import GithubButton from "./github-button";
+import ThemeToggle from "./theme-toggle";
 
 export default function Header() {
   const [open, setOpen] = useState(false);

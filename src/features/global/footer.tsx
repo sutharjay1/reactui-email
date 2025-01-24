@@ -1,4 +1,4 @@
-import { Separator } from "@/features/ui/separator";
+import { Separator } from "@/components/ui/separator";
 import { BrandGithubSolid, BrandX } from "@mynaui/icons-react";
 import Image from "next/image";
 import Link from "next/link";
