@@ -9,13 +9,21 @@ import { CodeBlockWrapper } from "./code-block-wrapper";
 import CopyButton from "./copy-button";
 
 type Props = React.HTMLAttributes<HTMLDivElement> & {
-  brand: string | Brand;
+  brand?: string | Brand;
+  component?: string;
   label: string;
   emailSource: string;
   emailHtml: string;
 };
 
-export const TemplateLayout = ({ label, emailHtml, emailSource, brand, ...props }: Props) => {
+export const TemplateLayout = ({
+  label,
+  emailHtml,
+  emailSource,
+  brand,
+  component,
+  ...props
+}: Props) => {
   return (
     <div {...props} className="w-full scroll-mt-24">
       <h1 className="mb-6 text-2xl font-extrabold leading-tight tracking-tight text-foreground md:text-3xl">
@@ -38,7 +46,7 @@ export const TemplateLayout = ({ label, emailHtml, emailSource, brand, ...props 
               <p className="text-base font-medium tracking-tight">Code</p>
             </TabsTrigger>
           </TabsList>
-          <SendEmail html={emailHtml} label={label} brand={brand} />
+          <SendEmail html={emailHtml} label={label} brand={brand ? brand : (component as string)} />
         </div>
         <Separator className="mb-4 mt-2" />
 
