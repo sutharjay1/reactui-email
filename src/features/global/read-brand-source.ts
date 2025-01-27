@@ -1,8 +1,8 @@
 import fs from "fs/promises";
 import path from "path";
 
-export async function readBrandSources(brand: string) {
-  const dirPath = path.join(process.cwd(), "src", "email", brand);
+export async function readBrandSources(brand: string, location: string[] = ["src", "email"]) {
+  const dirPath = path.join(process.cwd(), location.map((dir) => dir).join("/"), brand);
 
   async function getTSXFiles(dir: string): Promise<string[]> {
     const entries = await fs.readdir(dir, { withFileTypes: true });

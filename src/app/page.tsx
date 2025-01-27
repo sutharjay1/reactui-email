@@ -1,4 +1,5 @@
 import Footer from "@/features/global/footer";
+import { components } from "@/features/lib/component";
 import { lead } from "@/features/lib/constant";
 import { ArrowLongRightSolid, PlaySolid } from "@mynaui/icons-react";
 import Link from "next/link";
@@ -44,13 +45,38 @@ export default function Page() {
                             {lead.logo}
                           </div>
                           <div className="flex w-full flex-1 items-end justify-between">
-                            <span className="truncate">{lead.name}</span>
+                            <h3 className="truncate">{lead.name}</h3>
                             <ArrowLongRightSolid
                               size={20}
                               strokeWidth={2}
                               className="shrink-0 opacity-60"
                             />
                           </div>
+                        </Link>
+                      </li>
+                    ))}
+                </ul>
+              </nav>
+            </div>
+
+            <div className="mb-12">
+              <h2 className="mb-5 text-muted-foreground">Component</h2>
+              <nav>
+                <ul className="grid gap-2">
+                  {components
+                    .filter((lead) => lead.live)
+                    .map((lead) => (
+                      <li key={lead.label} className="relative flex h-full">
+                        <Link
+                          href={`/docs/component/${lead.label.replaceAll(" ", "-").trim().toLowerCase()}`}
+                          className="flex h-full w-full items-center justify-between rounded-lg border border-border bg-background p-4 font-semibold shadow-sm shadow-black/5 outline-offset-2 ring-inset ring-primary/10 transition-all duration-200 hover:bg-accent hover:text-accent-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring/70 disabled:pointer-events-none disabled:opacity-50"
+                        >
+                          <h3 className="truncate">{lead.label}</h3>
+                          <ArrowLongRightSolid
+                            size={20}
+                            strokeWidth={2}
+                            className="space-y-0 opacity-60"
+                          />
                         </Link>
                       </li>
                     ))}
