@@ -12,7 +12,7 @@ export default function Page() {
           <div className="mx-auto w-full max-w-3xl">
             <div className="mb-4">
               <p className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-background px-3 py-1 text-sm font-medium text-foreground shadow-sm shadow-black/[.12] dark:bg-accent">
-                <span className="mr-2 flex shrink-0 border-r border-border pr-2">
+                <span className="flex shrink-0 border-r border-border pr-2">
                   <PlaySolid size={20} strokeWidth={2} aria-hidden="true" />
                 </span>
                 New releases every week
@@ -30,7 +30,7 @@ export default function Page() {
             </div>
 
             <div className="mb-12">
-              <h2 className="mb-5 text-muted-foreground">Company</h2>
+              <h2 className="mb-5 text-muted-foreground">Templates</h2>
               <nav>
                 <ul className="grid gap-2 md:grid-cols-2">
                   {lead
