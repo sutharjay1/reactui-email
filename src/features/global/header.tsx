@@ -4,10 +4,11 @@ import Link, { LinkProps } from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { Drawer, DrawerContent, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
-import { lead, navLinks } from "@/features/lib/constant";
+import { lead } from "@/features/lib/constant";
 import { cn } from "@/features/lib/utils";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
+import { components } from "../lib/component";
 import GithubButton from "./github-button";
 import ThemeToggle from "./theme-toggle";
 
@@ -81,22 +82,6 @@ export default function Header() {
               <DrawerContent className="max-h-[60svh] p-0">
                 <div className="overflow-auto p-6">
                   <div className="flex flex-col space-y-3">
-                    {navLinks.map(
-                      (item) =>
-                        item.href && (
-                          <MobileLink
-                            key={item.href}
-                            href={item.href}
-                            onOpenChange={setOpen}
-                            className="text-base font-medium text-primary"
-                          >
-                            {item.label}
-                          </MobileLink>
-                        ),
-                    )}
-                  </div>
-                  <div className="my-6" />
-                  <div className="flex flex-col space-y-3">
                     <h3 className="text-base font-medium text-primary">Templates</h3>
                     {lead
                       .filter((lead) => lead.live)
@@ -108,6 +93,22 @@ export default function Header() {
                           className="text-base font-medium text-muted-foreground"
                         >
                           {lead.name}
+                        </MobileLink>
+                      ))}
+                  </div>
+                  <div className="my-6" />
+                  <div className="flex flex-col space-y-3">
+                    <h3 className="text-base font-medium text-primary">Components</h3>
+                    {components
+                      .filter((lead) => lead.live)
+                      .map((lead) => (
+                        <MobileLink
+                          key={lead.label.replaceAll(" ", "-").trim().toLowerCase()}
+                          href={`/docs/component/${lead.label.replaceAll(" ", "-").trim().toLowerCase()}`}
+                          onOpenChange={setOpen}
+                          className="text-base font-medium text-muted-foreground"
+                        >
+                          {lead.label}
                         </MobileLink>
                       ))}
                   </div>
