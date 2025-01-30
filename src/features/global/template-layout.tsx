@@ -1,3 +1,4 @@
+import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -14,6 +15,7 @@ type Props = React.HTMLAttributes<HTMLDivElement> & {
   label: string;
   emailSource: string;
   emailHtml: string;
+  badge?: string;
 };
 
 export const TemplateLayout = ({
@@ -22,13 +24,21 @@ export const TemplateLayout = ({
   emailSource,
   brand,
   component,
+  badge,
   ...props
 }: Props) => {
   return (
     <div {...props} className="w-full scroll-mt-24">
-      <h1 className="mb-6 text-2xl font-extrabold leading-tight tracking-tight text-foreground md:text-3xl">
-        {label}
-      </h1>
+      <div className="flex items-center gap-2">
+        <h1 className="mb-6 text-2xl font-extrabold leading-tight tracking-tight text-foreground md:text-3xl">
+          {label}
+        </h1>
+        {badge && (
+          <Badge className="mb-6 rounded-md" variant="secondary">
+            {badge}
+          </Badge>
+        )}
+      </div>
 
       <Tabs defaultValue="preview" className="w-full">
         <div className="flex w-full items-center justify-between">
