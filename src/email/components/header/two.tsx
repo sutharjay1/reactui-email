@@ -1,20 +1,24 @@
 import {
   Body,
+  Column,
   Container,
   Head,
   Hr,
   Html,
   Img,
+  Link,
   Preview,
+  Row,
   Section,
   Tailwind,
+  Text,
 } from "@react-email/components";
 
-export default function HeaderOne() {
+export default function HeaderTwo() {
   return (
     <Html>
       <Head />
-      <Preview>Get started with our Fundamentals course and discover the power of Framer.</Preview>
+      <Preview>Header Preview</Preview>
       <Tailwind
         config={{
           darkMode: "class",
@@ -24,7 +28,6 @@ export default function HeaderOne() {
                 sans: ["var(--font-sans)"],
               },
               colors: {
-                brand: "#0099ff",
                 muted: "#738A94",
                 background: "hsl(var(--background))",
                 foreground: "hsl(var(--foreground))",
@@ -84,6 +87,49 @@ export default function HeaderOne() {
               />
             </Section>
             <Hr className="my-4 border-primary" />
+            <Section className="my-2">
+              <table className="w-full" cellPadding="0" cellSpacing="0" role="presentation">
+                <tr>
+                  <td>
+                    <Row>
+                      <Column align="left" style={{ width: "25%" }}>
+                        <Link
+                          href="https://reactui.email"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Text className="m-0 text-center text-sm font-semibold text-primary">
+                            Docs
+                          </Text>
+                        </Link>
+                      </Column>
+                      <Column align="center" style={{ width: "25%" }}>
+                        <Link
+                          href="https://reactui.email"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Text className="m-0 text-center text-sm font-semibold text-primary">
+                            Blog
+                          </Text>
+                        </Link>
+                      </Column>
+                      <Column align="right" style={{ width: "25%" }}>
+                        <Link
+                          href="https://reactui.email"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Text className="m-0 text-center text-sm font-semibold text-primary">
+                            Help
+                          </Text>
+                        </Link>
+                      </Column>
+                    </Row>
+                  </td>
+                </tr>
+              </table>
+            </Section>
           </Container>
         </Body>
       </Tailwind>
