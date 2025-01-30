@@ -1,20 +1,22 @@
 import {
   Body,
+  Column,
   Container,
   Head,
-  Hr,
   Html,
   Img,
   Preview,
+  Row,
   Section,
   Tailwind,
+  Text,
 } from "@react-email/components";
 
 export default function HeaderOne() {
   return (
     <Html>
       <Head />
-      <Preview>Get started with our Fundamentals course and discover the power of Framer.</Preview>
+      <Preview>Header Preview</Preview>
       <Tailwind
         config={{
           darkMode: "class",
@@ -74,16 +76,29 @@ export default function HeaderOne() {
       >
         <Body className="font-sans">
           <Container className="mx-auto w-full px-4 py-5">
-            <Section className="mt-2 flex w-full flex-col items-center justify-center">
-              <Img
-                src="https://cdn.brandfetch.io/idZ_aiFAYa/w/128/h/128/theme/dark/logo.png?c=1bfwsmEH20zzEfSNTed"
-                width="50"
-                height="50"
-                alt="Framer"
-                className="mx-0 my-0"
-              />
+            <Section className="my-0">
+              <table className="w-full" cellPadding="0" cellSpacing="0" role="presentation">
+                <tr>
+                  <td>
+                    <Row>
+                      <Column align="left">
+                        <Img
+                          src="https://cdn.brandfetch.io/idZ_aiFAYa/w/128/h/128/theme/dark/logo.png"
+                          width="40"
+                          height="40"
+                          alt="Framer"
+                        />
+                      </Column>
+                      <Column align="right">
+                        <Text className="m-0 text-sm font-semibold text-primary">
+                          {new Date().toLocaleDateString()}
+                        </Text>
+                      </Column>
+                    </Row>
+                  </td>
+                </tr>
+              </table>
             </Section>
-            <Hr className="my-4 border-primary" />
           </Container>
         </Body>
       </Tailwind>
