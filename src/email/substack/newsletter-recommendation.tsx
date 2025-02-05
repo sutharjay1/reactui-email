@@ -152,12 +152,12 @@ export default function SubstackNewsletterRecommendation() {
               <Section className="mx-auto mb-4 mt-8 flex items-center justify-center">
                 <Row className="space-x-2">
                   <Column>
-                    <Button className="mx-1 flex w-fit cursor-pointer items-center gap-2 rounded-lg border bg-zinc-950 p-3 text-center text-[14px] font-medium text-zinc-50 no-underline">
+                    <Button className="mx-1 flex w-fit cursor-pointer items-center gap-2 rounded-[8px] border bg-zinc-950 p-3 text-center text-[14px] font-medium text-zinc-50 no-underline">
                       Get the app
                     </Button>
                   </Column>
                   <Column>
-                    <Button className="text-brand mx-1 flex w-fit cursor-pointer items-center gap-2 rounded-lg border p-1 text-center text-[14px] font-medium no-underline">
+                    <Button className="text-brand mx-1 flex w-fit cursor-pointer items-center gap-2 rounded-[8px] border p-1 text-center text-[14px] font-medium no-underline">
                       <Row>
                         <Column>
                           <Img

@@ -64,6 +64,7 @@ export default function Page() {
               <nav>
                 <ul className="grid gap-2">
                   {components
+                    .sort((a, b) => a.label.localeCompare(b.label))
                     .filter((lead) => lead.live)
                     .map((lead) => (
                       <li key={lead.label} className="relative flex h-full">
