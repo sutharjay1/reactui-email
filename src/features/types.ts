@@ -8,4 +8,5 @@ export type Brand =
   | "Dropbox"
   | "Nike"
   | "SubStack"
-  | "Peerlist";
+  | "Peerlist"
+  | "Notion";
