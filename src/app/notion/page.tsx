@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     "Notion React Components",
   ],
   openGraph: {
-    title: "Framer | ReactUI Email",
+    title: "Notion | ReactUI Email",
     description:
-      "Explore the Framer Welcome Notion template, featuring a clean, responsive design and code preview, built with ReactUI Email.",
+      "Explore the Notion Welcome Notion template, featuring a clean, responsive design and code preview, built with ReactUI Email.",
     url: "https://reactui.email",
     images: [
       {
