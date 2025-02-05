@@ -2,7 +2,7 @@ import { BrandFramerSolid } from "@mynaui/icons-react";
 import Image from "next/image";
 import React from "react";
 import { IoLogoApple, IoLogoDropbox, IoLogoGithub } from "react-icons/io5";
-import { SiAirbnb, SiNike, SiStripe, SiWebflow } from "react-icons/si";
+import { SiAirbnb, SiNike, SiNotion, SiStripe, SiWebflow } from "react-icons/si";
 import { Brand } from "../types";
 
 type LeadProps = {
@@ -34,6 +34,7 @@ export const lead: LeadProps = [
         alt="Peerlist"
       />
     ),
+
     live: true,
   },
   {
@@ -56,6 +57,13 @@ export const lead: LeadProps = [
         alt="Substack"
       />
     ),
+    live: true,
+  },
+  {
+    name: "Notion",
+    industry: "Productivity",
+    href: "https://notion.so",
+    logo: <SiNotion className="h-8 w-8 fill-black dark:fill-white" />,
     live: true,
   },
   {
