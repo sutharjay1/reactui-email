@@ -100,6 +100,7 @@ export default function Header() {
                   <div className="flex flex-col space-y-3">
                     <h3 className="text-base font-medium text-primary">Components</h3>
                     {components
+                      .sort((a, b) => a.label.localeCompare(b.label))
                       .filter((lead) => lead.live)
                       .map((lead) => (
                         <MobileLink
