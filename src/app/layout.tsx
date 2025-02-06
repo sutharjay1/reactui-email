@@ -4,9 +4,9 @@ import Header from "@/features/global/header";
 import Illustration from "@/features/global/illustration";
 import { ThemeProvider } from "@/features/global/theme-provider";
 import { cn } from "@/features/lib/utils";
+import { PostHogProvider } from "@/features/providers/ph-provider";
 import type { Metadata, Viewport } from "next";
 import { Inter as FontSans } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const fontSans = FontSans({
@@ -47,26 +47,22 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn("min-h-[100dvh] bg-background font-sans antialiased", fontSans.variable)}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className="relative flex flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
-            <Header />
-            <Illustration />
-            {children}
-          </div>
-        </ThemeProvider>
-        <Toaster />
-        <Sonner />
-        <Script
-          src="https://plausible.cruip.com/js/script.js"
-          data-domain="originui.com"
-          strategy="beforeInteractive"
-          defer
-        />
+        <PostHogProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div className="relative flex flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
+              <Header />
+              <Illustration />
+              {children}
+            </div>
+            <Toaster />
+            <Sonner />
+          </ThemeProvider>
+        </PostHogProvider>
       </body>
     </html>
   );
