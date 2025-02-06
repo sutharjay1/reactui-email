@@ -174,7 +174,7 @@ export default function SubstackUnreadPost() {
 
             <Section className="mt-4">
               <Button
-                className="bg-brand w-full rounded-lg px-6 py-3 text-center text-[14px] font-medium text-zinc-50 no-underline"
+                className="bg-brand w-full rounded-[8px] px-[24px] py-[12px] text-center text-[14px] font-medium text-zinc-50 no-underline"
                 href="https://substack.com"
               >
                 Continue reading in inbox

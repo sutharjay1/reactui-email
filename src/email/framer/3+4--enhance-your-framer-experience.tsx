@@ -138,7 +138,7 @@ export default function WelcomeToFramerTwo({ username = "Jay" }: WelcomeToFramer
 
             <Section className="mt-8">
               <Button
-                className="bg-brand rounded-lg px-6 py-3 text-center text-[14px] font-medium text-white no-underline"
+                className="bg-brand rounded-[8px] px-[24px] py-[12px] text-center text-[14px] font-medium text-white no-underline"
                 href="https://www.framer.com/downloads/"
               >
                 Download Framer app

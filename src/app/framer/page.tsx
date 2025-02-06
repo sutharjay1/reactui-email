@@ -67,26 +67,28 @@ const Page = async () => {
 
       const emailHtml = await render(<EmailComponent />);
 
-      const fileName =
-        path
-          .basename(source.filePath, ".tsx")
-          .split("--")
-          .reverse()
-          .map((part, index) => {
-            if (index === 1) {
-              return part.replace("+", " of ");
-            }
+      const fileNameParts = path
+        .basename(source.filePath, ".tsx")
+        .split("--")
+        .reverse()
+        .map((part, index) => {
+          if (index === 1) {
+            return part.replace("+", " of ");
+          }
 
-            if (index === 0) {
-              return part
-                .split("-")
-                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                .join(" ");
-            }
+          if (index === 0) {
+            return part
+              .split("-")
+              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(" ");
+          }
 
-            return part;
-          })
-          .join(" - (") + ")";
+          return part;
+        });
+
+      const shouldAddParentheses = /\d+\+\d+--/.test(path.basename(source.filePath));
+
+      const fileName = fileNameParts.join(" - (") + (shouldAddParentheses ? ")" : "");
 
       return {
         fileName,
