@@ -14,15 +14,13 @@ import {
   Text,
 } from "@react-email/components";
 
-interface WelcomeToFramerOneProps {
-  username?: string;
-}
-
-export default function WelcomeToFramerOne({ username = "Jay" }: WelcomeToFramerOneProps) {
+export default function FramerInvitationEmail() {
   return (
     <Html>
       <Head />
-      <Preview>Get started with our Fundamentals course and discover the power of Framer.</Preview>
+      <Preview>
+        Reminder: Jay has invited you to collaborate on the My Workspace team in Framer
+      </Preview>
       <Tailwind
         config={{
           darkMode: "class",
@@ -33,7 +31,7 @@ export default function WelcomeToFramerOne({ username = "Jay" }: WelcomeToFramer
               },
               colors: {
                 brand: "#0099ff",
-                muted: "#738A94",
+                base: "#181818",
                 background: "hsl(var(--background))",
                 foreground: "hsl(var(--foreground))",
                 card: {
@@ -93,70 +91,31 @@ export default function WelcomeToFramerOne({ username = "Jay" }: WelcomeToFramer
             </Section>
 
             <Section className="mt-4">
-              <Heading className="mx-0 mb-8 mt-2 p-0 text-lg font-normal">
-                Hey {username}, welcome to Framer!
-              </Heading>
-              <Text className="text-[14px] leading-6 text-primary/75">
-                We&apos;re thrilled you chose us to build your website. To get started, we recommend
-                watching our Framer Academy{" "}
+              <Heading className="mx-0 mb-8 mt-2 p-0 text-[18px] font-normal">Hey there,</Heading>
+              <Text className="text-[18px] leading-6 text-primary">
+                Jay has invited you to join the My Workspace workspace in{" "}
                 <Link
                   href="https://www.framer.com/academy/courses/fundamentals"
                   className="text-primary/75 underline"
                 >
-                  Fundamentals course
+                  Framer
                 </Link>
-                . This will help you get up and running quickly, especially if you&apos;re
-                transitioning from Figma or Sketch.
+                . Please accept the invite before it expires.{" "}
               </Text>
             </Section>
 
-            <Section className="mt-8">
-              <Img
-                src="https://d3b9kr64nievew.cloudfront.net/cm1rki22e0174akkvdbsg2yzi/cm1rucu6q0142tbx2o3qu05nh.jpg"
-                alt="Framer Academy"
-                className="w-full cursor-pointer rounded-2xl"
-              />
-            </Section>
-
-            <Section className="mt-8">
-              <Heading className="mx-0 mb-2 p-0 text-[16px] font-normal">
-                Why watch the Fundamentals course?
-              </Heading>
-              <ul className="list-disc pl-6">
-                <li className="text-[14px] leading-6 text-primary/75">
-                  Quick start: Get your first site live in minutes.
-                </li>
-                <li className="text-[14px] leading-6 text-primary/75">
-                  Easy transition: Perfect for designers moving from Figma or Sketch.
-                </li>
-                <li className="text-[14px] leading-6 text-primary/75">
-                  Expert tips: Learn best practices from the pros.
-                </li>
-              </ul>
-            </Section>
-
-            <Section className="mt-8">
+            <Section className="mt-4">
               <Button
                 className="bg-brand rounded-[8px] px-[24px] py-[12px] text-center text-[14px] font-medium text-white no-underline"
                 href="https://www.framer.com/academy/courses/fundamentals"
               >
-                Watch Fundamentals Course
+                Accept Invite
               </Button>
             </Section>
 
-            <Section className="mt-4">
-              <Text className="text-[14px] leading-6 text-primary/75">
-                We hope these tutorials help you settle in during your first day with Framer.
-                Tomorrow, we&lsquo;ll showcase fantastic{" "}
-                <Link
-                  href="https://www.framer.com/marketplace/"
-                  className="text-primary/75 underline"
-                >
-                  Framer Templates
-                </Link>{" "}
-                to create sites with ease!
-              </Text>
-              <Text className="text-[14px] leading-6">✌️ Framer</Text>
+            <Section className="mt-6">
+              <Text className="m-0 mb-2 text-[16px]">Have fun,</Text>
+              <Text className="m-0 text-[16px]">✌️Framer</Text>
             </Section>
 
             <Hr className="mx-0 my-[26px] w-full border border-solid border-[#eaeaea]" />
