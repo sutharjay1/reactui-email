@@ -34,7 +34,7 @@ export default function Footer() {
       <div className="mx-auto max-w-3xl pb-4">
         <Separator className="my-4 h-[1px] rounded-full bg-ring/20" />
 
-        <div className="flex flex-col items-center justify-between gap-4 px-4 text-center sm:flex-row sm:px-6">
+        <div className="flex flex-col items-center justify-between gap-4 px-4 text-center sm:flex-row sm:px-0">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} ReactUI Email. All rights reserved.
           </p>
