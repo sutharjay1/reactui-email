@@ -82,7 +82,7 @@ export default function WelcomeEmail() {
             <Section className="mt-8">
               <Link href="https://peerlist.io">
                 <Img
-                  src="http://cdn.mcauto-images-production.sendgrid.net/d60e16665ddff5a7/3f676a00-5763-44d7-a004-4323eabb2ff9/2180x560.png"
+                  src="https://dqy38fnwh4fqs.cloudfront.net/website/peerlist-logo-full-dark.svg"
                   width="124"
                   height="32"
                   alt="Peerlist Logo"
@@ -99,7 +99,7 @@ export default function WelcomeEmail() {
             </Section>
 
             <Section className="mt-8">
-              <Heading className="mb-4 text-xl font-bold">
+              <Heading className="mb-2 text-xl font-bold">
                 Discover and launch side-projects:
               </Heading>
               <Img
@@ -112,18 +112,17 @@ export default function WelcomeEmail() {
                 Project Spotlight is a weekly launchpad for side-projects. Find and explore great
                 side projects every week. Launch window is open through Mondays, starting 12 am GMT.
               </Text>
-              <Section className="flex justify-center">
-                <Button
-                  className="bg-brand mt-4 rounded-md px-6 py-4 font-semibold text-white"
-                  href="https://peerlist.io/projects"
-                >
-                  Launch your side-project →
-                </Button>
-              </Section>
+
+              <Button
+                className="bg-brand mt-4 rounded-[6px] px-[16px] py-[16px] text-[14px] font-semibold text-white"
+                href="https://peerlist.io/projects"
+              >
+                Launch your side-project →
+              </Button>
             </Section>
 
             <Section className="mt-8">
-              <Heading className="mb-4 text-xl font-bold">Hire and get hired:</Heading>
+              <Heading className="mb-2 text-xl font-bold">Hire and get hired:</Heading>
               <Img
                 src="http://cdn.mcauto-images-production.sendgrid.net/d60e16665ddff5a7/dbd58d7c-34f3-4987-9e83-ff0524b67dcb/1200x630.png"
                 width="600"
@@ -135,18 +134,17 @@ export default function WelcomeEmail() {
                 has an incredible pool of candidates with proof-of-work so if you&apos;re hiring,
                 post a job today!
               </Text>
-              <Section className="flex justify-center">
-                <Button
-                  className="bg-brand mt-4 rounded-md px-6 py-3 font-medium text-white"
-                  href="https://peerlist.io/jobs"
-                >
-                  Find Jobs →
-                </Button>
-              </Section>
+
+              <Button
+                className="bg-brand mt-4 rounded-[6px] px-[16px] py-[16px] text-[14px] font-semibold text-white"
+                href="https://peerlist.io/jobs"
+              >
+                Find Jobs →
+              </Button>
             </Section>
 
             <Section className="mt-8">
-              <Heading className="mb-4 text-xl font-bold">Find your tribe!</Heading>
+              <Heading className="mb-2 text-xl font-bold">Find your tribe!</Heading>
               <Img
                 src="http://cdn.mcauto-images-production.sendgrid.net/d60e16665ddff5a7/01bcfa0c-24f6-4ca8-bc75-5660ac19c3a8/1200x630.png"
                 width="600"
@@ -157,19 +155,18 @@ export default function WelcomeEmail() {
                 Share what you&apos;re working on, ask and answer questions, and connect with
                 like-minded individuals to expand your network.
               </Text>
-              <Section className="flex justify-center">
-                <Button
-                  className="bg-brand mt-4 rounded-md px-6 py-3 font-medium text-white"
-                  href="https://peerlist.io/feed"
-                >
-                  Share your thoughts →
-                </Button>
-              </Section>
+
+              <Button
+                className="bg-brand mt-4 rounded-[6px] px-[16px] py-[16px] text-[14px] font-semibold text-white"
+                href="https://peerlist.io/feed"
+              >
+                Share your thoughts →
+              </Button>
             </Section>
 
             <Hr className="mb-6 mt-8 border-gray-200" />
 
-            <Section className="text-left text-sm text-muted">
+            <Section className="text-left text-sm text-primary/80">
               <Text className="m-0 p-0 font-medium">From,</Text>
               <Text className="m-0 p-0 font-bold">Team Peerlist</Text>
               <Text className="m-0 p-0">

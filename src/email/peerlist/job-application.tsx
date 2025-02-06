@@ -81,7 +81,7 @@ export default function PeerlistJobApplication() {
             <Section className="mt-8">
               <Link href="https://peerlist.io">
                 <Img
-                  src="http://cdn.mcauto-images-production.sendgrid.net/d60e16665ddff5a7/3f676a00-5763-44d7-a004-4323eabb2ff9/2180x560.png"
+                  src="https://dqy38fnwh4fqs.cloudfront.net/website/peerlist-logo-full-dark.svg"
                   width="124"
                   height="32"
                   alt="Peerlist Logo"
@@ -109,18 +109,16 @@ export default function PeerlistJobApplication() {
               <Text className="text-base">We wish you all the best with your job hunting! 💚</Text>
             </Section>
 
-            <Section className="flex justify-center">
-              <Button
-                className="bg-brand mt-4 flex items-center gap-2 rounded-md px-6 py-4 font-semibold text-white"
-                href="https://peerlist.io"
-              >
-                Explore more jobs →
-              </Button>
-            </Section>
+            <Button
+              className="bg-brand mt-4 flex w-fit items-center gap-2 rounded-[6px] px-[16px] py-[16px] font-semibold text-white"
+              href="https://peerlist.io"
+            >
+              Explore more jobs →
+            </Button>
 
             <Hr className="mb-6 mt-8 border-gray-200" />
 
-            <Section className="text-left text-sm text-muted">
+            <Section className="text-left text-sm text-primary/80">
               <Text className="m-0 p-0 font-medium">From,</Text>
               <Text className="m-0 p-0 font-bold">Team Peerlist</Text>
               <Text className="m-0 p-0">
