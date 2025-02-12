@@ -159,7 +159,7 @@ export default function DubUpdatesEmail() {
                   <tr>
                     <td>
                       <Button
-                        className="mx-auto flex w-fit items-center justify-center rounded-[8px] border border-zinc-800/20 bg-white px-[24px] py-[12px] text-center text-[14px] font-semibold text-zinc-900"
+                        className="mx-auto flex w-fit items-center justify-center rounded-[8px] bg-white px-[24px] py-[12px] text-center text-[14px] font-semibold text-zinc-900"
                         href="https://ship.dub.co/home"
                       >
                         Check out our new homepage
@@ -210,7 +210,7 @@ export default function DubUpdatesEmail() {
                   <tr>
                     <td>
                       <Button
-                        className="mx-auto flex w-fit items-center justify-center rounded-[8px] border border-zinc-800/20 bg-white px-[24px] py-[12px] text-center text-[14px] font-semibold text-zinc-900"
+                        className="mx-auto flex w-fit items-center justify-center rounded-[8px] bg-white px-[24px] py-[12px] text-center text-[14px] font-semibold text-zinc-900"
                         href="https://ship.dub.co/dashboard-sharing"
                       >
                         Read the changelog
@@ -261,7 +261,7 @@ export default function DubUpdatesEmail() {
                   <tr>
                     <td>
                       <Button
-                        className="mx-auto flex w-fit items-center justify-center rounded-[8px] border border-zinc-800/20 bg-white px-[24px] py-[12px] text-center text-[14px] font-semibold text-zinc-900"
+                        className="mx-auto flex w-fit items-center justify-center rounded-[8px] bg-white px-[24px] py-[12px] text-center text-[14px] font-semibold text-zinc-900"
                         href="https://ship.dub.co/custom-qr-logo"
                       >
                         Read the changelog
@@ -312,7 +312,7 @@ export default function DubUpdatesEmail() {
                   <tr>
                     <td>
                       <Button
-                        className="mx-auto flex w-fit items-center justify-center rounded-[8px] border border-zinc-800/20 bg-white px-[24px] py-[12px] text-center text-[14px] font-semibold text-zinc-900"
+                        className="mx-auto flex w-fit items-center justify-center rounded-[8px] bg-white px-[24px] py-[12px] text-center text-[14px] font-semibold text-zinc-900"
                         href="https://ship.dub.co/home"
                       >
                         Read the changelog

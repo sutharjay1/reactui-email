@@ -98,27 +98,12 @@ export default function PeerlistMessageEmail() {
               </Text>
             </Section>
 
-            <Section className="mt-4 text-center">
-              <table
-                style={{
-                  border: "1px solid rgb(39 39 42 / 0.2)",
-                  borderRadius: "8px",
-                  borderCollapse: "collapse",
-                  width: "fit-content",
-                }}
-              >
-                <tr>
-                  <td>
-                    <Button
-                      className="mx-auto flex w-fit items-center justify-center rounded-[8px] border border-zinc-800/20 bg-white px-[24px] py-[12px] text-center text-[14px] font-semibold text-zinc-900"
-                      href="https://peerlist.io/messages"
-                    >
-                      Go to Inbox →
-                    </Button>
-                  </td>
-                </tr>
-              </table>
-            </Section>
+            <Button
+              className="bg-brand mt-4 flex w-fit items-center gap-2 rounded-[6px] px-[16px] py-[16px] font-semibold text-white"
+              href="https://peerlist.io/scroll"
+            >
+              Go to Inbox →
+            </Button>
 
             <Hr className="my-[32px] h-[1px] w-full border-muted-foreground" />
 
