@@ -9,4 +9,5 @@ export type Brand =
   | "Nike"
   | "SubStack"
   | "Peerlist"
-  | "Notion";
+  | "Notion"
+  | "Dub";

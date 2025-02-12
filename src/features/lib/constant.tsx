@@ -11,6 +11,7 @@ type LeadProps = {
   href: string;
   logo: React.JSX.Element;
   live: boolean;
+  update?: boolean;
 }[];
 
 export const lead: LeadProps = [
@@ -34,7 +35,7 @@ export const lead: LeadProps = [
         alt="Peerlist"
       />
     ),
-
+    update: true,
     live: true,
   },
   {
@@ -64,6 +65,23 @@ export const lead: LeadProps = [
     industry: "Productivity",
     href: "https://notion.so",
     logo: <SiNotion className="h-8 w-8 fill-black dark:fill-white" />,
+    live: true,
+  },
+  {
+    name: "Dub",
+    industry: "URL Shortener",
+    href: "https://dub.sh",
+    logo: (
+      <Image
+        width={28}
+        height={28}
+        priority
+        src="https://res.cloudinary.com/sutharjay/image/upload/v1739369064/me/projects/reactui-email/dub-co.png"
+        className="rounded-md"
+        alt="Dub.sh"
+      />
+    ),
+    update: true,
     live: true,
   },
   {

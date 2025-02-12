@@ -10,30 +10,29 @@ import path from "path";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Framer Email Templates | ReactUI Email",
+  title: "Dub | ReactUI Email",
   description:
-    "Collection of Framer-style email templates built with React, Next.js and TailwindCSS. View previews and get the code for responsive, customizable email designs.",
+    "Preview and code for the Dub Welcome Email template, built with Next.js and TailwindCSS for ReactUI Email.",
   keywords: [
     "ReactUI Email",
-    "Framer Email Templates",
+    "Dub Email Template",
     "TailwindCSS Email",
     "Next.js Email Templates",
     "Responsive Email Design",
     "Email Template Code",
     "React Email Components",
-    "Framer Email Design",
-    "Email Development",
-    "Email Marketing Templates",
+    "Dub Welcome Email",
+    "Dub React Components",
   ],
   openGraph: {
-    title: "Framer Email Templates | ReactUI Email",
+    title: "Dub | ReactUI Email",
     description:
-      "Collection of Framer-style email templates built with React, Next.js and TailwindCSS. View previews and get the code for responsive, customizable email designs.",
-    url: "https://reactui.email/framer",
+      "Explore the Dub Welcome Email template, featuring a clean, responsive design and code preview, built with ReactUI Email.",
+    url: "https://reactui.email",
     images: [
       {
         url: "https://reactui.email/opengraph-image.jpg",
-        alt: "Framer Email Templates Preview",
+        alt: "Dub Welcome Email Template Preview",
         width: 1200,
         height: 630,
       },
@@ -41,13 +40,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Framer Email Templates | ReactUI Email",
+    title: "Dub | ReactUI Email",
     description:
-      "Collection of Framer-style email templates built with React, Next.js and TailwindCSS. View previews and get the code for responsive, customizable email designs.",
+      "Check out the Dub Welcome Email template with preview and code, built with Next.js and TailwindCSS for ReactUI Email.",
     images: ["https://reactui.email/opengraph-image.jpg"],
   },
   alternates: {
-    canonical: "https://reactui.email/framer",
+    canonical: "https://reactui.email/dub",
   },
   robots: {
     index: true,
@@ -56,7 +55,7 @@ export const metadata: Metadata = {
 };
 
 const Page = async () => {
-  const brand = "framer";
+  const brand = "dub";
 
   const emailSource = await readBrandSources(brand);
 
@@ -105,12 +104,12 @@ const Page = async () => {
       <div className="px-4 sm:px-6">
         <div className="mx-auto w-full max-w-3xl">
           <PageHeader title={brand}>
-            <Link href="https://framer.com?ref=reactui-email" target="_blank">
+            <Link href="https://dub.co?ref=reactui-email" target="_blank">
               <span className="bg-gradient-to-br from-zinc-500 to-zinc-800 bg-clip-text font-semibold text-transparent dark:from-indigo-100 dark:to-zinc-500">
-                Framer
+                Dub.co
               </span>{" "}
-              is a powerful design and prototyping tool that helps teams create stunning websites
-              and apps with interactive animations.
+              is an open-source link management tool for modern marketing teams to create, share,
+              and track short links.
             </Link>
           </PageHeader>
 
