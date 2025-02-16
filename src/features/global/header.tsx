@@ -4,7 +4,7 @@ import Link, { LinkProps } from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { Drawer, DrawerContent, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
-import { lead } from "@/features/lib/constant";
+import { lead } from "@/features/lib/template-list";
 import { cn } from "@/features/lib/utils";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";

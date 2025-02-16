@@ -93,7 +93,7 @@ export default function PeerlistMessageEmail() {
             </Section>
 
             <Section className="bg-brand mb-8 rounded-[4px]">
-              <Text className="px-[24px] italic text-primary/80">
+              <Text className="px-[24px] italic text-white dark:text-primary/80">
                 Thanks for featuring Peerlist emails! 💚
               </Text>
             </Section>
@@ -108,12 +108,26 @@ export default function PeerlistMessageEmail() {
             <Hr className="my-[32px] h-[1px] w-full border-muted-foreground" />
 
             <Section className="text-center">
-              <Img
+              {/* <Img
                 src="https://dqy38fnwh4fqs.cloudfront.net/website/peerlist-logo-full-dark.svg"
                 alt="Peerlist Logo"
                 width="93"
                 height="24"
                 className="mx-auto mb-2"
+              /> */}
+              <Img
+                src="https://dqy38fnwh4fqs.cloudfront.net/website/peerlist-logo-full-dark.svg"
+                alt="Peerlist Logo Dark"
+                width="93"
+                height="24"
+                className="light-image mx-auto mb-2"
+              />
+              <Img
+                src="https://dqy38fnwh4fqs.cloudfront.net/website/peerlist-logo-full-light.svg"
+                alt="Peerlist Logo Light"
+                width="93"
+                height="24"
+                className="dark-image mx-auto mb-2"
               />
               <Text className="text-sm text-primary/80">
                 You can unsubscribe and manage email notifications from{" "}

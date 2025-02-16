@@ -156,3 +156,11 @@
     }
   }
 }
+
+.light-image {
+  @apply hidden dark:block;
+}
+
+.dark-image {
+  @apply block dark:hidden;
+}

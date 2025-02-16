@@ -10,4 +10,5 @@ export type Brand =
   | "SubStack"
   | "Peerlist"
   | "Notion"
+  | "Supabase"
   | "Dub";
