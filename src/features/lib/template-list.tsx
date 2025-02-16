@@ -68,6 +68,23 @@ export const lead: LeadProps = [
     live: true,
   },
   {
+    name: "Supabase",
+    industry: "Database",
+    href: "https://supabase.com",
+    logo: (
+      <Image
+        width={28}
+        height={28}
+        priority
+        src="https://res.cloudinary.com/sutharjay/image/upload/v1739700369/me/projects/reactui-email/logo/supabase.svg"
+        className="rounded-md"
+        alt="Supabase"
+      />
+    ),
+    update: true,
+    live: true,
+  },
+  {
     name: "Dub",
     industry: "URL Shortener",
     href: "https://dub.sh",
@@ -81,7 +98,7 @@ export const lead: LeadProps = [
         alt="Dub.sh"
       />
     ),
-    update: true,
+    update: false,
     live: true,
   },
   {
@@ -126,12 +143,5 @@ export const lead: LeadProps = [
     href: "https://nike.com",
     logo: <SiNike className="h-8 w-8" />,
     live: false,
-  },
-];
-
-export const navLinks = [
-  {
-    label: "Components",
-    href: "/docs/components",
   },
 ];
