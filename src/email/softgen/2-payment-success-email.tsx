@@ -13,13 +13,11 @@ import {
   Text,
 } from "@react-email/components";
 
-export default function SoftgenWelcomeEmail() {
+export default function SoftgenPaymentSuccessEmail() {
   return (
     <Html>
       <Head />
-      <Preview>
-        Welcome to Softgen - Your AI Web App Developer. Build web apps without coding.
-      </Preview>
+      <Preview>Payment Confirmed - Welcome to Softgen. Your subscription is now active.</Preview>
       <Tailwind
         config={{
           darkMode: "class",
@@ -99,16 +97,84 @@ export default function SoftgenWelcomeEmail() {
             </Section>
 
             <Section className="mt-8">
-              <Text className="text-xl font-bold leading-tight">Welcome to Softgen!</Text>
+              <Text className="text-xl font-bold leading-tight">Payment Confirmed! 🎉</Text>
             </Section>
 
             <Section className="mt-2">
-              <Text className="text-base">Hey there 👋,</Text>
+              <Text className="text-base">Hello,</Text>
               <Text className="text-base">
-                Thanks for joining Softgen! We&apos;re excited to help you transform your ideas into
-                reality. Softgen is your{" "}
-                <span className="text-base font-bold">AI Web App Developer</span>. Simply describe
-                your vision, give instructions, and build full-stack web apps - no coding required.
+                Your payment for the <span className="font-bold">Pro Plan</span> has been
+                successfully processed. Welcome to Softgen, where you can create innovative
+                solutions without coding.
+              </Text>
+            </Section>
+
+            <Section className="mt-4">
+              <div
+                style={{
+                  border: "1px solid rgb(39 39 42 / 0.25)",
+                  borderRadius: "12px",
+                  overflow: "hidden",
+                }}
+              >
+                <table
+                  style={{
+                    width: "100%",
+                    borderCollapse: "collapse",
+                  }}
+                >
+                  <tbody>
+                    <tr>
+                      <td
+                        style={{
+                          padding: "16px",
+                          borderBottom: "1px solid rgb(39 39 42 / 0.25)",
+                          backgroundColor: "rgb(39 39 42 / 0.2)",
+                        }}
+                      >
+                        <Text className="m-0 text-lg font-semibold text-primary">Plan Details</Text>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style={{ padding: "16px" }}>
+                        <table style={{ width: "100%" }}>
+                          <tbody>
+                            <tr>
+                              <td style={{ width: "30%", paddingBottom: "8px" }}>
+                                <Text className="m-0 text-sm font-medium text-zinc-500">
+                                  Plan Type
+                                </Text>
+                              </td>
+                              <td style={{ paddingBottom: "8px" }}>
+                                <Text className="m-0 text-sm font-bold">Pro Plan</Text>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style={{ width: "30%" }}>
+                                <Text className="m-0 text-sm font-medium text-zinc-500">
+                                  Status
+                                </Text>
+                              </td>
+                              <td>
+                                <Text className="m-0 text-sm font-bold text-emerald-400">
+                                  Active
+                                </Text>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </Section>
+
+            <Section className="mt-4">
+              <Text className="text-base">
+                To get started, please set up your account using the button below. This will allow
+                you to access all the features of your plan and begin your project development with
+                Softgen.
               </Text>
             </Section>
 
@@ -130,7 +196,7 @@ export default function SoftgenWelcomeEmail() {
                       className="mx-auto flex w-fit items-center justify-center rounded-[8px] bg-white px-[24px] py-[12px] text-center text-[14px] font-semibold text-zinc-900"
                       href="https://softgen.ai/dashboard"
                     >
-                      Start Building Your App →
+                      Dashboard →
                     </Button>
                   </td>
                 </tr>
