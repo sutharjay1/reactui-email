@@ -3,23 +3,17 @@ import {
   Button,
   Container,
   Head,
-  Hr,
   Html,
-  Img,
-  Link,
   Preview,
   Section,
   Tailwind,
-  Text,
 } from "@react-email/components";
 
-export default function SoftgenWelcomeEmail() {
+export default function ButtonWithBorder() {
   return (
     <Html>
       <Head />
-      <Preview>
-        Welcome to Softgen - Your AI Web App Developer. Build web apps without coding.
-      </Preview>
+      <Preview>Get started with our Button Component.</Preview>
       <Tailwind
         config={{
           darkMode: "class",
@@ -29,8 +23,8 @@ export default function SoftgenWelcomeEmail() {
                 sans: ["var(--font-sans)"],
               },
               colors: {
-                brand: "#0a0a0a",
-                muted: "#fafafa",
+                brand: "#ff6719",
+                muted: "#738A94",
                 background: "hsl(var(--background))",
                 foreground: "hsl(var(--foreground))",
                 card: {
@@ -78,41 +72,8 @@ export default function SoftgenWelcomeEmail() {
         }}
       >
         <Body className="font-sans">
-          <Container className="mx-auto px-4 py-5">
-            <Section className="mt-8">
-              <Link href="https://softgen.ai">
-                <Img
-                  src="https://res.cloudinary.com/sutharjay/image/upload/v1740686249/me/projects/reactui-email/logo/softgen-light.svg"
-                  width="50"
-                  height="50"
-                  alt="Softgen Logo Light"
-                  className="hidden dark:block"
-                />
-                <Img
-                  src="https://res.cloudinary.com/sutharjay/image/upload/v1740686249/me/projects/reactui-email/logo/softgen-dark.svg"
-                  width="50"
-                  height="50"
-                  alt="Softgen Logo Dark"
-                  className="block dark:hidden"
-                />
-              </Link>
-            </Section>
-
-            <Section className="mt-8">
-              <Text className="text-xl font-bold leading-tight">Welcome to Softgen!</Text>
-            </Section>
-
-            <Section className="mt-2">
-              <Text className="text-base">Hey there 👋,</Text>
-              <Text className="text-base">
-                Thanks for joining Softgen! We&apos;re excited to help you transform your ideas into
-                reality. Softgen is your{" "}
-                <span className="text-base font-bold">AI Web App Developer</span>. Simply describe
-                your vision, give instructions, and build full-stack web apps - no coding required.
-              </Text>
-            </Section>
-
-            <Section className="mt-4 text-center">
+          <Container className="mx-auto flex w-full flex-col items-center justify-center px-4">
+            <Section className="text-center">
               <table
                 style={{
                   border: "1px solid rgb(39 39 42 / 0.2)",
@@ -136,14 +97,6 @@ export default function SoftgenWelcomeEmail() {
                   </td>
                 </tr>
               </table>
-            </Section>
-
-            <Hr className="mb-6 mt-8 border-gray-200" />
-
-            <Section className="text-left text-sm text-primary/80">
-              <Text className="m-0 p-0 font-medium">From,</Text>
-              <Text className="m-0 p-0 font-bold">Team Softgen</Text>
-              <Text className="m-0 p-0">Softgen – a Kortix AI Corp Product</Text>
             </Section>
           </Container>
         </Body>
