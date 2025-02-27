@@ -108,9 +108,9 @@ const Page = async () => {
               <span className="bg-gradient-to-br from-zinc-500 to-zinc-800 bg-clip-text font-semibold text-transparent dark:from-indigo-100 dark:to-zinc-500">
                 Dub.co
               </span>{" "}
-              is an open-source link management tool for modern marketing teams to create, share,
-              and track short links.
             </Link>
+            is an open-source link management tool for modern marketing teams to create, share, and
+            track short links.
           </PageHeader>
 
           {emailPreviews.map((preview) => (

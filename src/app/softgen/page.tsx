@@ -10,30 +10,29 @@ import path from "path";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Notion Email Templates | ReactUI Email",
+  title: "SoftGen | ReactUI Email",
   description:
-    "Collection of Notion-style email templates built with React, Next.js and TailwindCSS. View previews and get the code for responsive, customizable email designs.",
+    "Preview and code for the SoftGen Email templates, built with Next.js and TailwindCSS for ReactUI Email.",
   keywords: [
     "ReactUI Email",
-    "Notion Email Templates",
+    "SoftGen Email Template",
     "TailwindCSS Email",
     "Next.js Email Templates",
     "Responsive Email Design",
     "Email Template Code",
     "React Email Components",
-    "Notion Email Design",
-    "Email Development",
-    "Email Marketing Templates",
+    "SoftGen Welcome Email",
+    "SoftGen React Components",
   ],
   openGraph: {
-    title: "Notion Email Templates | ReactUI Email",
+    title: "SoftGen | ReactUI Email",
     description:
-      "Collection of Notion-style email templates built with React, Next.js and TailwindCSS. View previews and get the code for responsive, customizable email designs.",
-    url: "https://reactui.email/notion",
+      "Explore the SoftGen Email templates, featuring a clean, responsive design and code preview, built with ReactUI Email.",
+    url: "https://reactui.email",
     images: [
       {
         url: "https://reactui.email/opengraph-image.jpg",
-        alt: "Notion Email Templates Preview",
+        alt: "SoftGen Email Template Preview",
         width: 1200,
         height: 630,
       },
@@ -41,13 +40,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Notion Email Templates | ReactUI Email",
+    title: "SoftGen | ReactUI Email",
     description:
-      "Collection of Notion-style email templates built with React, Next.js and TailwindCSS. View previews and get the code for responsive, customizable email designs.",
+      "Check out the SoftGen Email templates with preview and code, built with Next.js and TailwindCSS for ReactUI Email.",
     images: ["https://reactui.email/opengraph-image.jpg"],
   },
   alternates: {
-    canonical: "https://reactui.email/notion",
+    canonical: "https://reactui.email/softgen",
   },
   robots: {
     index: true,
@@ -56,7 +55,7 @@ export const metadata: Metadata = {
 };
 
 const Page = async () => {
-  const brand = "notion";
+  const brand = "softgen";
 
   const emailSource = await readBrandSources(brand);
 
@@ -71,6 +70,7 @@ const Page = async () => {
 
       const fileName = path
         .basename(source.filePath, ".tsx")
+        .replace(/^\d+-/, "")
         .split("-")
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
@@ -88,12 +88,13 @@ const Page = async () => {
       <div className="px-4 sm:px-6">
         <div className="mx-auto w-full max-w-3xl">
           <PageHeader title={brand}>
-            <Link href="https://notion.so?ref=reactui-email" target="_blank">
+            <Link href="https://softgen.ai?ref=reactui-email" target="_blank">
               <span className="bg-gradient-to-br from-zinc-500 to-zinc-800 bg-clip-text font-semibold text-transparent dark:from-indigo-100 dark:to-zinc-500">
-                Notion
-              </span>
-            </Link>{" "}
-            is an all-in-one workspace for notes, project management, documents, and collaboration.
+                SoftGen
+              </span>{" "}
+            </Link>
+            is an AI-powered platform that builds full-stack web apps from your instructions. No
+            coding needed.
           </PageHeader>
 
           {emailPreviews.map((preview) => (

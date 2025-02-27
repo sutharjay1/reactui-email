@@ -11,4 +11,5 @@ export type Brand =
   | "Peerlist"
   | "Notion"
   | "Supabase"
-  | "Dub";
+  | "Dub"
+  | "SoftGen";

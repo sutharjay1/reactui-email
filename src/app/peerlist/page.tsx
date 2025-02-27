@@ -92,9 +92,9 @@ const Page = async () => {
               <span className="bg-gradient-to-br from-zinc-500 to-zinc-800 bg-clip-text font-semibold text-transparent dark:from-indigo-100 dark:to-zinc-500">
                 Peerlist
               </span>{" "}
-              is a professional network for tech people to showcase their work, connect with peers,
-              and find their next opportunity.
             </Link>
+            is a professional network for tech people to showcase their work, connect with peers,
+            and find their next opportunity.
           </PageHeader>
 
           {emailPreviews.map((preview) => (

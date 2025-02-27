@@ -92,9 +92,9 @@ const Page = async () => {
               <span className="bg-gradient-to-br from-zinc-500 to-zinc-800 bg-clip-text font-semibold text-transparent dark:from-indigo-100 dark:to-zinc-500">
                 Substack
               </span>{" "}
-              is a platform for writers and creators to publish newsletters, podcasts and build
-              media businesses.
             </Link>
+            is a platform for writers and creators to publish newsletters, podcasts and build media
+            businesses.
           </PageHeader>
 
           {emailPreviews.map((preview) => (

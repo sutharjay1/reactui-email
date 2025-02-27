@@ -92,9 +92,9 @@ const Page = async () => {
               <span className="bg-gradient-to-br from-zinc-500 to-zinc-800 bg-clip-text font-semibold text-transparent dark:from-indigo-100 dark:to-zinc-500">
                 Apple
               </span>{" "}
-              is a global technology company that designs, develops, and sells consumer electronics,
-              software, and services.
             </Link>
+            is a global technology company that designs, develops, and sells consumer electronics,
+            software, and services.
           </PageHeader>
 
           {emailPreviews.map((preview) => (
