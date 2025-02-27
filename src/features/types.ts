@@ -12,4 +12,4 @@ export type Brand =
   | "Notion"
   | "Supabase"
   | "Dub"
-  | "SoftGen";
+  | "Softgen";

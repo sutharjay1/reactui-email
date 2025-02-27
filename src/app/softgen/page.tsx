@@ -90,7 +90,7 @@ const Page = async () => {
           <PageHeader title={brand}>
             <Link href="https://softgen.ai?ref=reactui-email" target="_blank">
               <span className="bg-gradient-to-br from-zinc-500 to-zinc-800 bg-clip-text font-semibold text-transparent dark:from-indigo-100 dark:to-zinc-500">
-                SoftGen
+                Softgen
               </span>{" "}
             </Link>
             is an AI-powered platform that builds full-stack web apps from your instructions. No

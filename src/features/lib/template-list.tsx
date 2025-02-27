@@ -102,7 +102,7 @@ export const lead: LeadProps = [
     live: true,
   },
   {
-    name: "SoftGen",
+    name: "Softgen",
     industry: "Software Development",
     href: "https://softgen.ai",
     logo: (
@@ -113,7 +113,7 @@ export const lead: LeadProps = [
           priority
           src="https://res.cloudinary.com/sutharjay/image/upload/v1740686276/me/projects/reactui-email/logo/softgen-dark.svg"
           className="h-[28px] w-[28px] rounded-md dark:hidden"
-          alt="SoftGen"
+          alt="Softgen Logo Dark"
         />
         <Image
           width={28}
@@ -121,7 +121,7 @@ export const lead: LeadProps = [
           priority
           src="https://res.cloudinary.com/sutharjay/image/upload/v1740686249/me/projects/reactui-email/logo/softgen-light.svg"
           className="hidden h-[28px] w-[28px] rounded-md dark:block"
-          alt="SoftGen"
+          alt="Softgen Logo Light"
         />
       </>
     ),
