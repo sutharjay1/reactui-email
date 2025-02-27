@@ -81,7 +81,7 @@ export const lead: LeadProps = [
         alt="Supabase"
       />
     ),
-    update: true,
+    update: false,
     live: true,
   },
   {
@@ -99,6 +99,33 @@ export const lead: LeadProps = [
       />
     ),
     update: false,
+    live: true,
+  },
+  {
+    name: "SoftGen",
+    industry: "Software Development",
+    href: "https://softgen.ai",
+    logo: (
+      <>
+        <Image
+          width={28}
+          height={28}
+          priority
+          src="https://res.cloudinary.com/sutharjay/image/upload/v1740686276/me/projects/reactui-email/logo/softgen-dark.svg"
+          className="h-[28px] w-[28px] rounded-md dark:hidden"
+          alt="SoftGen"
+        />
+        <Image
+          width={28}
+          height={28}
+          priority
+          src="https://res.cloudinary.com/sutharjay/image/upload/v1740686249/me/projects/reactui-email/logo/softgen-light.svg"
+          className="hidden h-[28px] w-[28px] rounded-md dark:block"
+          alt="SoftGen"
+        />
+      </>
+    ),
+    update: true,
     live: true,
   },
   {

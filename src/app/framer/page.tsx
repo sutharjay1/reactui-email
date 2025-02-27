@@ -109,9 +109,9 @@ const Page = async () => {
               <span className="bg-gradient-to-br from-zinc-500 to-zinc-800 bg-clip-text font-semibold text-transparent dark:from-indigo-100 dark:to-zinc-500">
                 Framer
               </span>{" "}
-              is a powerful design and prototyping tool that helps teams create stunning websites
-              and apps with interactive animations.
             </Link>
+            is a powerful design and prototyping tool that helps teams create stunning websites and
+            apps with interactive animations.
           </PageHeader>
 
           {emailPreviews.map((preview) => (

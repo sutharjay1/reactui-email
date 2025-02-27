@@ -92,9 +92,9 @@ const Page = async () => {
               <span className="bg-gradient-to-br from-zinc-500 to-zinc-800 bg-clip-text font-semibold text-transparent dark:from-indigo-100 dark:to-zinc-500">
                 Supabase
               </span>{" "}
-              is an open source Firebase alternative providing all the backend features you need to
-              build a product.
             </Link>
+            is an open source Firebase alternative providing all the backend features you need to
+            build a product.
           </PageHeader>
 
           {emailPreviews.map((preview) => (
