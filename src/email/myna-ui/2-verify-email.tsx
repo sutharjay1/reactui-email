@@ -282,7 +282,7 @@ export default function MynaUIVerifyEmail() {
                             </Link>
                           </td>
                           <td style={{ paddingRight: "16px" }}>
-                            <Link href="hhttps://www.instagram.com/praveenjuge/">
+                            <Link href="https://www.instagram.com/praveenjuge/">
                               <svg
                                 width="24"
                                 height="24"
