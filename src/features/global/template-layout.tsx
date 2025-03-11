@@ -4,13 +4,12 @@ import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/features/lib/utils";
 import SendEmail from "../email/send";
-import { Brand } from "../types";
 import { CodeBlock } from "./code-block";
 import { CodeBlockWrapper } from "./code-block-wrapper";
 import CopyButton from "./copy-button";
 
 type Props = React.HTMLAttributes<HTMLDivElement> & {
-  brand?: string | Brand;
+  brand?: string;
   component?: string;
   label: string;
   emailSource: string;
