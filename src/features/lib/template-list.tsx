@@ -3,10 +3,9 @@ import Image from "next/image";
 import React from "react";
 import { IoLogoApple, IoLogoDropbox, IoLogoGithub } from "react-icons/io5";
 import { SiAirbnb, SiNike, SiNotion, SiStripe, SiWebflow } from "react-icons/si";
-import { Brand } from "../types";
 
 type LeadProps = {
-  name: Brand;
+  name: string;
   industry: string;
   href: string;
   logo: React.JSX.Element;
@@ -122,6 +121,33 @@ export const lead: LeadProps = [
           src="https://res.cloudinary.com/sutharjay/image/upload/v1740686249/me/projects/reactui-email/logo/softgen-light.svg"
           className="hidden h-[28px] w-[28px] rounded-md dark:block"
           alt="Softgen Logo Light"
+        />
+      </>
+    ),
+    update: true,
+    live: true,
+  },
+  {
+    name: "Myna UI",
+    industry: "UI Library",
+    href: "https://mynaui.com",
+    logo: (
+      <>
+        <Image
+          width={28}
+          height={28}
+          priority
+          src="https://res.cloudinary.com/sutharjay/image/upload/v1741637855/me/projects/reactui-email/logo/myna-ui-light.svg"
+          className="h-[28px] w-[28px] rounded-md dark:hidden"
+          alt="Myna UI Logo Dark"
+        />
+        <Image
+          width={28}
+          height={28}
+          priority
+          src="https://res.cloudinary.com/sutharjay/image/upload/v1741638547/me/projects/reactui-email/logo/myna-ui-dark.svg"
+          className="hidden h-[28px] w-[28px] rounded-md dark:block"
+          alt="Myna UI Logo Light"
         />
       </>
     ),
