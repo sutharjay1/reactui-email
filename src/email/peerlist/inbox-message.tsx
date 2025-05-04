@@ -105,30 +105,9 @@ export default function PeerlistMessageEmail() {
               Go to Inbox →
             </Button>
 
-            <Hr className="my-[32px] h-[1px] w-full border-muted-foreground" />
+            <Hr className="mb-[16px] mt-[32px] h-[1px] w-full border-muted-foreground" />
 
-            <Section className="text-center">
-              {/* <Img
-                src="https://dqy38fnwh4fqs.cloudfront.net/website/peerlist-logo-full-dark.svg"
-                alt="Peerlist Logo"
-                width="93"
-                height="24"
-                className="mx-auto mb-2"
-              /> */}
-              <Img
-                src="https://dqy38fnwh4fqs.cloudfront.net/website/peerlist-logo-full-dark.svg"
-                alt="Peerlist Logo Dark"
-                width="93"
-                height="24"
-                className="light-image mx-auto mb-2"
-              />
-              <Img
-                src="https://dqy38fnwh4fqs.cloudfront.net/website/peerlist-logo-full-light.svg"
-                alt="Peerlist Logo Light"
-                width="93"
-                height="24"
-                className="dark-image mx-auto mb-2"
-              />
+            <Section className="text-left">
               <Text className="text-sm text-primary/80">
                 You can unsubscribe and manage email notifications from{" "}
                 <Link href="https://peerlist.io/settings" className="text-green-600 underline">
