@@ -1,14 +1,18 @@
 export const components = [
   {
+    label: "Confirm Account",
+    live: true,
+  },
+  {
     label: "Button",
     live: true,
   },
   {
-    label: "Header",
+    label: "Grid",
     live: true,
   },
   {
-    label: "Grid",
+    label: "Header",
     live: true,
   },
 ];

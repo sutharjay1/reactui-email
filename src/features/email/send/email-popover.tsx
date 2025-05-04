@@ -18,6 +18,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import Loading from "@/components/ui/loading";
 import { errorToast, successToast } from "@/features/global/toast";
 import { cn } from "@/features/lib/utils";
 import Link from "next/link";
@@ -74,7 +75,7 @@ export function EmailSendPopover({ html, label, brand }: EmailSendPopoverProps) 
     <div className={cn("flex items-center justify-between gap-4")}>
       <Drawer open={open} onOpenChange={setOpen}>
         <DrawerTrigger asChild>
-          <Button variant="ghost">
+          <Button variant="outline">
             <Send className="mr-2 h-4 w-4" />
             <p className="text-base text-primary/75 hover:text-primary">Send</p>
           </Button>
@@ -127,8 +128,15 @@ export function EmailSendPopover({ html, label, brand }: EmailSendPopoverProps) 
                       Plunk
                     </Link>
                   </p>
-                  <Button type="submit" disabled={isPending}>
-                    {isPending ? "Sending..." : "Send"}
+                  <Button type="submit" disabled={isPending} className="flex items-center gap-2">
+                    {isPending ? (
+                      <>
+                        <Loading className="h-4 w-4 text-background" />
+                        Sending...
+                      </>
+                    ) : (
+                      "Send"
+                    )}
                   </Button>
                 </div>
               </form>
