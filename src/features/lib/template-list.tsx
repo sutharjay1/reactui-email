@@ -1,7 +1,7 @@
 import { BrandFramerSolid } from "@mynaui/icons-react";
 import Image from "next/image";
 import React from "react";
-import { IoLogoApple, IoLogoDropbox, IoLogoGithub } from "react-icons/io5";
+import { IoLogoDropbox, IoLogoGithub } from "react-icons/io5";
 import { SiAirbnb, SiNike, SiNotion, SiStripe, SiWebflow } from "react-icons/si";
 
 type LeadProps = {
@@ -15,13 +15,6 @@ type LeadProps = {
 
 export const lead: LeadProps = [
   {
-    name: "Apple",
-    industry: "Technology",
-    href: "https://apple.com",
-    logo: <IoLogoApple className="h-8 w-8" />,
-    live: true,
-  },
-  {
     name: "Peerlist",
     industry: "Social Networking",
     href: "https://peerlist.io",
@@ -34,7 +27,7 @@ export const lead: LeadProps = [
         alt="Peerlist"
       />
     ),
-    update: true,
+    update: false,
     live: true,
   },
   {
@@ -124,7 +117,7 @@ export const lead: LeadProps = [
         />
       </>
     ),
-    update: true,
+    update: false,
     live: true,
   },
   {
@@ -151,7 +144,7 @@ export const lead: LeadProps = [
         />
       </>
     ),
-    update: true,
+    update: false,
     live: true,
   },
   {
