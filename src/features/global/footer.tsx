@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
 import { BrandGithubSolid, BrandX } from "@mynaui/icons-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,10 +29,10 @@ const socialLinks = [
   },
 ];
 
-export default function Footer() {
+export default function Footer({ className }: { className?: string }) {
   return (
-    <footer className="mx-auto w-full">
-      <div className="mx-auto max-w-3xl pb-4">
+    <footer className={cn("mx-auto w-full", className)}>
+      <div className="mx-auto max-w-6xl pb-4">
         <Separator className="my-4 h-[1px] rounded-full bg-ring/20" />
 
         <div className="flex flex-col items-center justify-between gap-4 px-4 text-center sm:flex-row sm:px-0">

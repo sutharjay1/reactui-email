@@ -8,7 +8,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { cn } from "@/features/lib/utils";
+import { cn } from "@/lib/utils";
 
 type Props = {
   emailPreviews: {

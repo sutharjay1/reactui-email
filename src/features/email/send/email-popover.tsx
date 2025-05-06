@@ -20,7 +20,7 @@ import {
 import { Input } from "@/components/ui/input";
 import Loading from "@/components/ui/loading";
 import { errorToast, successToast } from "@/features/global/toast";
-import { cn } from "@/features/lib/utils";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { emailTrigger } from "./email-trigger";
 

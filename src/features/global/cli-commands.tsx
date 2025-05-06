@@ -2,7 +2,7 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CopyButton from "@/features/global/copy-button";
-import { useConfig } from "@/features/hooks/use-config";
+import { useConfig } from "@/hooks/use-config";
 
 const CliCommands = () => {
   const { config, setConfig } = useConfig();

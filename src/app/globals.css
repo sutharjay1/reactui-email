@@ -164,3 +164,12 @@
 .dark-image {
   @apply block dark:hidden;
 }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

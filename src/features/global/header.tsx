@@ -4,16 +4,17 @@ import Link, { LinkProps } from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { Drawer, DrawerContent, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
-import { lead } from "@/features/lib/template-list";
-import { cn } from "@/features/lib/utils";
+import { useAuth } from "@/hooks/use-auth";
+import { lead } from "@/lib/template-list";
+import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
-import { components } from "../lib/component";
-import GithubButton from "./github-button";
-import ThemeToggle from "./theme-toggle";
+import { components } from "../../lib/component";
+import AccountDropdown from "./account-dropdown";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const { session } = useAuth();
 
   const onOpenChange = useCallback((open: boolean) => {
     setOpen(open);
@@ -24,7 +25,7 @@ export default function Header() {
       <div className="px-4 sm:px-6">
         <div
           className={cn(
-            "mx-auto mb-16 flex h-[72px] w-full max-w-6xl items-center justify-between gap-3 border-b border-border/70",
+            "mx-auto flex h-[72px] w-full max-w-6xl items-center justify-between gap-3 border-b border-border/70",
           )}
         >
           <Link
@@ -53,8 +54,18 @@ export default function Header() {
             </span>
           </Link>
           <div className="flex items-center gap-2">
-            <GithubButton />
-            <ThemeToggle />
+            {session ? (
+              <AccountDropdown />
+            ) : (
+              <Button
+                className="flex h-8 items-center justify-center rounded-full px-2 md:px-4"
+                asChild
+              >
+                <Link href="/login" className="flex items-center justify-center">
+                  Login
+                </Link>
+              </Button>
+            )}
             <Drawer open={open} onOpenChange={onOpenChange}>
               <DrawerTitle className="sr-only">Navigation</DrawerTitle>
               <DrawerTrigger asChild>

@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { cn } from "@/features/lib/utils";
+import { cn } from "@/lib/utils";
 import SendEmail from "../email/send";
 import { CodeBlock } from "./code-block";
 import { CodeBlockWrapper } from "./code-block-wrapper";

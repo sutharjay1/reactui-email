@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { cn } from "@/features/lib/utils";
+import { cn } from "@/lib/utils";
 import * as React from "react";
 
 interface CodeBlockProps extends React.HTMLAttributes<HTMLDivElement> {

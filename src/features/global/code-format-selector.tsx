@@ -2,9 +2,9 @@
 
 import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
-import { useColors } from "@/features/hooks/use-colors";
-import { Color, getColorFormat } from "@/features/lib/color";
-import { cn } from "@/features/lib/utils";
+import { useColors } from "@/hooks/use-colors";
+import { Color, getColorFormat } from "@/lib/color";
+import { cn } from "@/lib/utils";
 import * as React from "react";
 
 export function ColorFormatSelector({

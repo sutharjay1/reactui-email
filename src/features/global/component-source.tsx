@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/features/lib/utils";
+import { cn } from "@/lib/utils";
 import * as React from "react";
 import { CodeBlockWrapper } from "./code-block-wrapper";
 

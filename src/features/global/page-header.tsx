@@ -1,4 +1,4 @@
-import { t } from "@/features/lib/utils";
+import { t } from "@/lib/utils";
 import CliCommands from "./cli-commands";
 
 interface PageHeaderProps {

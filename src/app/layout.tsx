@@ -1,10 +1,10 @@
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import Header from "@/features/global/header";
-import Illustration from "@/features/global/illustration";
 import { ThemeProvider } from "@/features/global/theme-provider";
-import { cn } from "@/features/lib/utils";
 import { PostHogProvider } from "@/features/providers/ph-provider";
+import { QueryProvider } from "@/features/providers/query-provider";
+import { cn } from "@/lib/utils";
 import type { Metadata, Viewport } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
@@ -48,20 +48,22 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={cn("min-h-[100dvh] bg-background font-sans antialiased", fontSans.variable)}>
         <PostHogProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <div className="relative flex flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
-              <Header />
-              <Illustration />
-              {children}
-            </div>
-            <Toaster />
-            <Sonner />
-          </ThemeProvider>
+          <QueryProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <div className="relative flex flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
+                <Header />
+                {/* <Illustration /> */}
+                {children}
+              </div>
+              <Toaster />
+              <Sonner />
+            </ThemeProvider>
+          </QueryProvider>
         </PostHogProvider>
       </body>
     </html>

@@ -8,7 +8,7 @@ import {
   SpinnerOne,
 } from "@mynaui/icons-react";
 import { toast } from "sonner";
-import { cn } from "../lib/utils";
+import { cn } from "../../lib/utils";
 
 type ToastOptions = {
   description?: string;
