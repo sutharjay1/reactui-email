@@ -10,7 +10,7 @@ const getLocalStorage = () => {
 };
 
 export const authClient = createAuthClient({
-  baseURL: "http://localhost:3000",
+  baseURL: "https://ai.reactui.email",
   plugins: [inferAdditionalFields<typeof auth>()],
   fetchOptions: {
     onSuccess: (ctx) => {
