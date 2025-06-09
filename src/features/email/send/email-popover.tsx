@@ -1,7 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Send } from "@mynaui/icons-react";
+import { SendSolid } from "@mynaui/icons-react";
 import { useMutation } from "@tanstack/react-query";
 import * as React from "react";
 import { useForm } from "react-hook-form";
@@ -75,9 +75,9 @@ export function EmailSendPopover({ html, label, brand }: EmailSendPopoverProps) 
     <div className={cn("flex items-center justify-between gap-4")}>
       <Drawer open={open} onOpenChange={setOpen}>
         <DrawerTrigger asChild>
-          <Button variant="outline">
-            <Send className="mr-2 h-4 w-4" />
-            <p className="text-base text-primary/75 hover:text-primary">Send</p>
+          <Button className="flex items-center gap-2">
+            Send
+            <SendSolid className="size-4" />
           </Button>
         </DrawerTrigger>
         <DrawerContent className="mx-auto w-full max-w-3xl p-6 pt-0">

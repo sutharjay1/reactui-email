@@ -6,7 +6,6 @@ import { cn } from "@/features/lib/utils";
 import SendEmail from "../email/send";
 import { CodeBlock } from "./code-block";
 import { CodeBlockWrapper } from "./code-block-wrapper";
-import CopyButton from "./copy-button";
 
 type Props = React.HTMLAttributes<HTMLDivElement> & {
   brand?: string;
@@ -49,10 +48,16 @@ export const TemplateLayout = ({
               <p className="text-base font-medium tracking-tight">Preview</p>
             </TabsTrigger>
             <TabsTrigger
-              value="code"
+              value="tsx-code"
               className="h-[1.45rem] rounded-md px-2 transition-all data-[state=active]:shadow-none"
             >
-              <p className="text-base font-medium tracking-tight">Code</p>
+              <p className="text-base font-medium tracking-tight">TSX</p>
+            </TabsTrigger>
+            <TabsTrigger
+              value="html-code"
+              className="h-[1.45rem] rounded-md px-2 transition-all data-[state=active]:shadow-none"
+            >
+              <p className="text-base font-medium tracking-tight">HTML</p>
             </TabsTrigger>
           </TabsList>
           <SendEmail html={emailHtml} label={label} brand={brand ? brand : (component as string)} />
@@ -70,15 +75,31 @@ export const TemplateLayout = ({
           </Card>
         </TabsContent>
 
-        <TabsContent value="code" className="space-y-4">
+        <TabsContent value="tsx-code" className="space-y-4">
           <Card className="border-none bg-transparent shadow-none">
             <CardContent className="relative space-y-4 px-0 md:px-0">
               <CodeBlockWrapper
                 expandButtonTitle="Expand"
                 className={cn("mb-6 overflow-hidden rounded-md")}
               >
-                <CodeBlock lang="tsx">{emailSource as string}</CodeBlock>
-                <CopyButton componentSource={emailSource!} />
+                <CodeBlock lang="tsx" label={label}>
+                  {emailSource as string}
+                </CodeBlock>
+              </CodeBlockWrapper>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="html-code" className="space-y-4">
+          <Card className="border-none bg-transparent shadow-none">
+            <CardContent className="relative space-y-4 px-0 md:px-0">
+              <CodeBlockWrapper
+                expandButtonTitle="Expand"
+                className={cn("mb-6 overflow-hidden rounded-md")}
+              >
+                <CodeBlock lang="html" label={label}>
+                  {emailHtml}
+                </CodeBlock>
               </CodeBlockWrapper>
             </CardContent>
           </Card>
