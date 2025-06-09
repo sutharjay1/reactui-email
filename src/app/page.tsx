@@ -30,7 +30,7 @@ export default function Page() {
             </div>
 
             <div className="mb-12">
-              <h2 className="mb-5 text-muted-foreground">Templates</h2>
+              <h2 className="mb-5 font-medium text-muted-foreground">Templates</h2>
               <nav>
                 <ul className="grid gap-2 md:grid-cols-2">
                   {lead
@@ -66,7 +66,7 @@ export default function Page() {
             </div>
 
             <div className="mb-12">
-              <h2 className="mb-5 text-muted-foreground">Component</h2>
+              <h2 className="mb-5 font-medium text-muted-foreground">Component</h2>
               <nav>
                 <ul className="grid gap-2">
                   {components

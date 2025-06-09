@@ -15,14 +15,14 @@ const CopyButton = ({
   const { copied, copy } = useCopy();
 
   return (
-    <div className={cn("dark absolute right-4 top-2", className)}>
+    <div className={cn("dark absolute right-4 top-1", className)}>
       <TooltipProvider delayDuration={0}>
         <Tooltip>
           <TooltipTrigger asChild>
             <Button
               variant="ghost"
               size="icon"
-              className="text-muted-foreground transition-none hover:bg-transparent hover:text-foreground disabled:opacity-100"
+              className="text-primary transition-none hover:bg-transparent hover:text-foreground disabled:opacity-100"
               onClick={() => copy(componentSource)}
               aria-label={copied ? "Copied" : "Copy component source"}
               disabled={copied}
